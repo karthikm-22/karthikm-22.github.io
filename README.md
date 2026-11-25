@@ -1,63 +1,74 @@
 # Karthik Maddimsetti — Portfolio
 
-A plain HTML website. No build step and nothing to install. GitHub Pages serves it as-is.
+Live at **https://ramaraju-lemniscate.github.io/karthik-portfolio/**
 
-## Put it online with GitHub Pages (one time, about 5 minutes)
+GitHub Pages builds this site automatically with Jekyll whenever something changes. There's nothing to install.
 
-1. Sign in to GitHub with the account the site should belong to.
-2. Create a new repository (the **+** at the top right, then **New repository**).
-   - Name it **`<username>.github.io`** (for example `karthik-m.github.io`) and the site's address will be `https://karthik-m.github.io`.
-   - Any other name, like `portfolio`, also works. The address is then `https://<username>.github.io/portfolio`.
-   - Set it to **Public** and click **Create repository**.
-3. On the new repo page, click **uploading an existing file**. Drag in **everything inside this folder** (including the `css`, `js`, `images` and `files` folders), not the folder itself. Then click **Commit changes**.
-4. Go to **Settings → Pages**. Under *Build and deployment*, set **Source: Deploy from a branch** and **Branch: `main`**, folder **`/ (root)`**, then click **Save**.
-5. Wait about a minute and refresh. The live address appears at the top of the Pages screen.
+## The easy way to edit: Pages CMS (no code)
 
-> The `.nojekyll` file is hidden on most computers. If it doesn't upload, that's fine because the site works without it.
+1. Go to **https://app.pagescms.org** and sign in with GitHub.
+2. Open the **karthik-portfolio** repository.
+3. Use the menu on the left:
+   - **Profile & home page**: name, bio, photo, email, CV, GitHub/LinkedIn/Scholar links, the four highlight boxes, research interest, publications.
+   - **Projects**: one entry per project card. Add, reorder (with the *Position* number) or delete projects. Upload a card image.
+4. Click **Save**. The live site updates in about a minute.
 
-## Filling things in later
+**Giving a project its own page:** write something in the project's *Write-up* box (headings, text, images and lists all work). The card then links to a full page like the PPG one. Projects with an empty Write-up stay as plain cards.
 
-**Everything you'll want to add is in one file: `config.js`.**
+Any field left empty is hidden on the site. For example, the Contact section appears only once an email or a link is filled in.
 
-On GitHub, open `config.js` and click the ✏️ pencil icon. Fill in a value between the quotes and click **Commit changes**. The live site updates within a minute.
+## Editing directly on GitHub
 
-| What                     | In `config.js`                | What happens when it's empty                         |
-|--------------------------|-------------------------------|------------------------------------------------------|
-| Email                    | `email`                       | The email line and Contact section are hidden         |
-| GitHub / LinkedIn / Scholar | `github`, `linkedin`, `scholar` | That link is hidden                                 |
-| CV                       | `cv`                          | The "Download CV" button is hidden                    |
-| Profile photo            | `photos.profile`              | The photo column is hidden                            |
-| Project photos           | `photos.processor`, `sobel`, … | A neat grid tile with the project's tag is shown     |
+| To change…                         | Edit this file                         |
+|-----------------------------------|----------------------------------------|
+| Intro, links, highlights, research, publications | `_data/profile.yml`        |
+| A project card or its write-up    | `_projects/<name>.md`                  |
+| Add a project                     | Copy any file in `_projects/`, rename it, edit it |
+| Colours, fonts, spacing           | `css/style.css` (the `:root` block at the top) |
+| Site title, description, address | `_config.yml`                          |
 
-The Contact section and its menu link stay hidden until at least one contact detail is filled in.
+Photos go in `images/` and PDFs in `files/` (open the folder on GitHub, then **Add file → Upload files**). Then use their path, for example `images/profile.jpg`. File names are case-sensitive.
 
-### Adding a photo or the CV
+### A project file looks like this
 
-1. On GitHub, open the `images` folder (or the `files` folder for the CV). Click **Add file → Upload files**, drop the file in, and click **Commit changes**.
-2. Open `config.js` and write the path, for example:
-   ```js
-   profile: "images/profile.jpg",
-   cv: "files/Karthik-Maddimsetti-CV.pdf",
-   ```
-3. Commit. If the path has a typo, the site falls back to the placeholder tile instead of showing a broken image.
+```markdown
+---
+title: Sobel Edge Detection on FPGA
+order: 2                      # position on the home page
+tag: FPGA · Image Processing
+summary: One or two sentences for the card.
+meta: 2.015 ms per 256 × 256 image
+image: images/sobel.jpg       # optional card image
+mark: FPGA                    # shown on the tile when there's no image
+---
 
-File names are **case-sensitive** on GitHub Pages. `Profile.JPG` and `profile.jpg` count as different files.
+## Optional write-up
 
-## Editing text
+Anything written here turns the card into a full project page.
 
-Text lives in `index.html` (home page) and `ppg-front-end.html` (PPG project page). Edit them the same way, with the pencil icon on GitHub. Each section of `index.html` is marked with a comment such as `<!-- ============ PROJECTS ============ -->`.
+![Alt text](images/sobel-result.png)
+*Fig. 1 — The italic line right under an image becomes its caption.*
+```
 
-To make another project open its own page like the PPG one, copy `ppg-front-end.html` to a new name and change its contents. Then, in `index.html`, change that project's `<article class="card">…</article>` to `<a class="card" href="new-page.html">…</a>`.
+`_projects/ppg-front-end.md` shows every optional page field: intro, facts row, cover image, key numbers strip and report PDF.
 
-## Files
+## Moving the site to Karthik's account
+
+Go to **Settings → General → Transfer ownership**. Afterwards, in `_config.yml`:
+
+- If the repo is renamed to `<his-username>.github.io`, set `url: https://<his-username>.github.io` and `baseurl: ""`.
+- Otherwise, set `url: https://<his-username>.github.io` and keep `baseurl: /karthik-portfolio`.
+
+## Folder map
 
 ```
-index.html            home page
-ppg-front-end.html    PPG project write-up
-config.js             ← links, email, CV, photos (edit this)
-css/style.css         look and layout
-js/site.js            applies config.js (no need to edit)
-images/               photos (images/ppg/ holds the PPG figures)
-files/                PDFs (PPG report, CV)
-favicon.svg, 404.html
+_config.yml        site settings (title, address, SEO)
+_data/profile.yml  home page content
+_projects/         one Markdown file per project
+_layouts/          page templates (default + project)
+_includes/         small template pieces
+index.html         home page template
+css/style.css      all styling
+images/  files/    photos and PDFs
+.pages.yml         Pages CMS editor setup
 ```

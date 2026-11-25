@@ -1,4 +1,5 @@
-/* Karthik Maddimsetti — portfolio styles */
+/* Karthik Maddimsetti — portfolio styles.
+   Colours and fonts are set once in :root below; change them there. */
 :root{
   --bg:#f7f6f2; --ink:#1b1c1e; --body:#33353a; --text:#222427; --muted:#55575c;
   --line:#e2e0da; --line-2:#d6d4cd; --card:#fff;
@@ -114,8 +115,8 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .kpis .k{font-size:13px;color:var(--body)}
 .toc{display:flex;flex-wrap:wrap;gap:10px 24px;padding:28px 0 8px;font-size:14px}
 .article{max-width:760px;margin:0 auto;padding-bottom:40px}
-.article section{display:flex;flex-direction:column;gap:18px;padding-top:72px;scroll-margin-top:64px}
-.article section:first-child{padding-top:56px}
+.article>section{display:flex;flex-direction:column;gap:18px;padding-top:72px;scroll-margin-top:64px}
+.article>section:first-child{padding-top:56px}
 .article h2{margin:0;font-family:var(--serif);font-weight:450;font-size:32px;letter-spacing:-.005em}
 .article h3{margin:0;font-size:18px;font-weight:600}
 .article p,.article li{font-size:16.5px;line-height:1.7;color:var(--text)}
@@ -137,3 +138,21 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .refs li{font-size:13.5px;line-height:1.55;color:var(--body)}
 .p-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding:40px 0 56px;margin-top:48px;border-top:1px solid var(--ink);font-size:14px}
 .p-foot a{font-weight:500}
+
+/* ---------- project write-ups written in Markdown ---------- */
+.prose h2{scroll-margin-top:72px}
+.prose>h2{padding-top:72px}
+.prose>h2:first-child{padding-top:56px}
+.prose>h3{margin:28px 0 0}
+.prose>*+*{margin-top:18px}
+.prose>h2+*,.prose>h3+*{margin-top:14px}
+.prose p,.prose li{font-size:16.5px;line-height:1.7;color:var(--text)}
+.prose ul,.prose ol{padding-left:22px;display:flex;flex-direction:column;gap:10px;margin:18px 0 0}
+.prose ul{list-style:none;padding:0}
+.prose ul>li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px;line-height:1.6;color:var(--body)}
+.prose ul>li strong{color:var(--ink)}
+.prose code{font-family:var(--mono);font-size:.92em;background:#efede7;padding:1px 6px;border-radius:4px;color:var(--ink)}
+/* Figures: an image followed by an *italic caption* in the same paragraph */
+.prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px}
+.prose p>img+em{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;font-style:normal;color:var(--muted)}
+.prose h2#references~ol li{font-size:13.5px;line-height:1.55;color:var(--body)}

@@ -1,0 +1,57 @@
+# ──────────────────────────────────────────────────────────────
+#  Karthik's details: everything on the home page except the
+#  project cards (those live in the _projects folder).
+#  Leave a value as "" to hide it on the site.
+# ──────────────────────────────────────────────────────────────
+
+name: Karthik Maddimsetti
+eyebrow: VLSI DSP Architectures · ASIC Design
+bio: >-
+  BTech in Electronics and VLSI Design at Dhirubhai Ambani University.
+  I design hardware architectures for signal-processing algorithms,
+  from RTL and FPGA to fabricated silicon.
+
+photo: ""        # e.g. images/profile.jpg  (portrait, about 800 × 1000 px)
+
+# Contact & links
+email: ""        # e.g. karthik@example.com
+cv: ""           # e.g. files/Karthik-Maddimsetti-CV.pdf
+github: ""       # e.g. https://github.com/karthikm-22
+linkedin: ""     # e.g. https://www.linkedin.com/in/...
+scholar: ""      # e.g. https://scholar.google.com/citations?user=...
+
+# The four highlight numbers under the intro
+stats:
+  - value: "9.84"
+    suffix: "/ 10"
+    label: CPI, BTech Electronics & VLSI Design
+  - value: Taped out
+    suffix: ""
+    label: 8-bit processor fabricated at SCL Chandigarh
+  - value: Lead author
+    suffix: ""
+    label: CMES-2027, IIT Guwahati (under review)
+  - value: Top 15
+    suffix: ""
+    label: Nationally, ICEdge 2025 R&D Forum, IISc
+
+# Shown next to the "Projects" heading
+project_tags: ASIC · FPGA · DSP · Biomedical
+
+research:
+  question: >-
+    How much of an algorithm's suitability for real-time, low-power deployment
+    is determined not only by the algorithm itself, but also by the
+    architectural choices made in translating it into hardware.
+  text: >-
+    I am interested in VLSI DSP architectures and ASIC design, where throughput,
+    power, and area constraints are treated as first-order design inputs rather
+    than downstream implementation details.
+
+publications:
+  - label: Under review · CMES-2027, IIT Guwahati
+    title: A framework for LVET and CO estimation using custom hardware
+    note: Lead author
+  - label: 2025 · IISc Bangalore
+    title: Top 15 nationally, ICEdge 2025 R&D Forum
+    note: On-edge disease classification using PPG/ECG signals

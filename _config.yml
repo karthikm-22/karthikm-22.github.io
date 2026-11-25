@@ -1,0 +1,49 @@
+# Site-wide settings. Most day-to-day edits happen in _data/profile.yml
+# and the files in _projects/ (or through the Pages CMS editor).
+
+title: Karthik Maddimsetti
+description: >-
+  Karthik Maddimsetti, BTech Electronics and VLSI Design at Dhirubhai Ambani
+  University. Hardware architectures for signal-processing algorithms, from
+  RTL and FPGA to fabricated silicon.
+lang: en
+author: Karthik Maddimsetti
+
+# Where the site lives. If the repo moves to Karthik's account as
+# <username>.github.io, set url to https://<username>.github.io and baseurl to "".
+url: https://ramaraju-lemniscate.github.io
+baseurl: /karthik-portfolio
+
+# Image shown when a link to the site is shared (LinkedIn, WhatsApp, ...).
+# A page or project can override it with its own `image:`.
+defaults:
+  - scope: { path: "" }
+    values:
+      image: images/ppg/p5-6.jpg
+  - scope: { path: "", type: projects }
+    values:
+      layout: project
+
+twitter:
+  card: summary_large_image
+
+collections:
+  projects:
+    output: true
+    permalink: /:name.html   # e.g. _projects/ppg-front-end.md → /ppg-front-end.html
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - website/
+  - "*.zip"
+  - Gemfile
+  - Gemfile.lock
