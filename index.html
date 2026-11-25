@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karthik Maddimsetti — VLSI DSP Architectures &amp; ASIC Design</title>
+<meta name="description" content="Karthik Maddimsetti, BTech Electronics and VLSI Design at Dhirubhai Ambani University. Hardware architectures for signal-processing algorithms, from RTL and FPGA to fabricated silicon.">
+<meta property="og:title" content="Karthik Maddimsetti — VLSI DSP Architectures &amp; ASIC Design">
+<meta property="og:description" content="Hardware architectures for signal-processing algorithms, from RTL and FPGA to fabricated silicon.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f7f6f2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="topnav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Karthik Maddimsetti</a>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <header id="top" class="hero">
+    <div class="hero-text">
+      <div class="eyebrow">VLSI DSP Architectures · ASIC Design</div>
+      <h1>Karthik Maddimsetti</h1>
+      <p>BTech in Electronics and VLSI Design at Dhirubhai Ambani University. I design hardware architectures for signal-processing algorithms, from RTL and FPGA to fabricated silicon.</p>
+      <div class="actions" data-hide-when-empty>
+        <a class="btn" data-link="cv" href="#" target="_blank" rel="noopener">Download CV</a>
+        <a data-link="github" href="#">GitHub ↗</a>
+        <a data-link="linkedin" href="#">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="hero-photo" data-photo="profile" data-hide-if-empty data-alt="Portrait of Karthik Maddimsetti"></div>
+  </header>
+
+  <!-- ============ HIGHLIGHTS ============ -->
+  <section class="stats" aria-label="Highlights">
+    <div><span class="big">9.84<small> / 10</small></span><span class="small">CPI, BTech Electronics &amp; VLSI Design</span></div>
+    <div><span class="big">Taped out</span><span class="small">8-bit processor fabricated at SCL Chandigarh</span></div>
+    <div><span class="big">Lead author</span><span class="small">CMES-2027, IIT Guwahati (under review)</span></div>
+    <div><span class="big">Top 15</span><span class="small">Nationally, ICEdge 2025 R&amp;D Forum, IISc</span></div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="projects">
+    <div class="projects-head">
+      <h2>Projects</h2>
+      <span class="meta">08 PROJECTS · ASIC · FPGA · DSP · BIOMEDICAL</span>
+    </div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="thumb" data-photo="processor" data-mark="ASIC" data-alt="Virtuoso layout of the 8-bit register block"></div>
+        <div class="card-body">
+          <div class="tag">ASIC · Physical Design</div>
+          <h3>8-bit Processor: Register Block</h3>
+          <p>An 8-bit register block interfacing with the ALU and bus, laid out in Cadence Virtuoso for minimum area and fabricated at SCL Chandigarh.</p>
+          <div class="meta">110 MHz · 13110.188 µm² · AR 1.033</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb" data-photo="sobel" data-mark="FPGA" data-alt="Input image and its Sobel edge-detected output"></div>
+        <div class="card-body">
+          <div class="tag">FPGA · Image Processing</div>
+          <h3>Sobel Edge Detection on FPGA</h3>
+          <p>Sobel algorithm in Verilog with a complete PC-FPGA-PC pipeline over UART on a Xilinx Nexys7.</p>
+          <div class="meta">2.015 ms per 256 × 256 image</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb" data-photo="cardiac" data-mark="LVET" data-alt="PCG and PPG hardware and waveforms"></div>
+        <div class="card-body">
+          <div class="tag">Research · Biomedical Hardware</div>
+          <h3>LVET and Cardiac Output Estimation</h3>
+          <p>Analog front ends and lightweight non-ML algorithms for LVET, SV and CO from PCG and PPG signals. Ultra-low power IC design Lab, under Prof. Biswajit Mishra.</p>
+          <div class="meta">Paper under review, CMES-2027</div>
+        </div>
+      </article>
+
+      <a class="card" href="ppg-front-end.html">
+        <div class="thumb" data-photo="ppg" data-mark="PPG" data-alt="PPG circuit on breadboard"></div>
+        <div class="card-body">
+          <div class="tag">Analog Front End · Biomedical</div>
+          <h3>PPG Signal Acquisition and Conditioning</h3>
+          <p>A transmission-mode IR sensor and a two-stage band-pass filter that removes the DC offset and amplifies the pulsatile signal for heart-rate estimation.</p>
+          <div class="meta">0.5–3.4 Hz pass band · gain 48 · HR ≈ 85 bpm</div>
+          <span class="more">Read full project →</span>
+        </div>
+      </a>
+
+      <article class="card">
+        <div class="thumb" data-photo="edge" data-mark="Edge" data-alt="Acquisition hardware and mobile app"></div>
+        <div class="card-body">
+          <div class="tag">Edge Hardware</div>
+          <h3>On-edge Disease Classification</h3>
+          <p>Hardware for PPG/ECG acquisition and wireless transmission to a mobile application.</p>
+          <div class="meta">Top 15 nationally, ICEdge 2025</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb" data-photo="dwt" data-mark="DWT" data-alt="Polyphase DWT architecture"></div>
+        <div class="card-body">
+          <div class="tag">VLSI DSP Architecture</div>
+          <h3>Polyphase Multi-level DWT</h3>
+          <p>Hardware implementation of a multi-level wavelet transform, optimized for throughput and latency.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb" data-photo="fir" data-mark="FIR" data-alt="FIR filter block diagram"></div>
+        <div class="card-body">
+          <div class="tag">VLSI DSP Architecture</div>
+          <h3>FIR Filter, Custom Adder-Multiplier</h3>
+          <p>FIR filter built from custom adder and multiplier blocks, with analysis of quantization errors and transition dependent delays.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb" data-photo="sap" data-mark="SAP" data-alt="Breadboard build of the SAP computer"></div>
+        <div class="card-body">
+          <div class="tag">Digital Systems</div>
+          <h3>Simple-As-Possible Computer</h3>
+          <p>A 16x8 RAM built from discrete components on a breadboard and integrated with the ALU and Memory Address Register.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="section split">
+    <h2>Research interest</h2>
+    <div class="body">
+      <p class="lede">How much of an algorithm's suitability for real-time, low-power deployment is determined not only by the algorithm itself, but also by the architectural choices made in translating it into hardware.</p>
+      <p class="para">I am interested in VLSI DSP architectures and ASIC design, where throughput, power, and area constraints are treated as first-order design inputs rather than downstream implementation details.</p>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section id="publications" class="section split">
+    <h2>Publications</h2>
+    <div class="body" style="gap:24px">
+      <div class="pub">
+        <div class="label">Under review · CMES-2027, IIT Guwahati</div>
+        <div class="title">A framework for LVET and CO estimation using custom hardware</div>
+        <div class="note">Lead author</div>
+      </div>
+      <div class="pub">
+        <div class="label">2025 · IISc Bangalore</div>
+        <div class="title">Top 15 nationally, ICEdge 2025 R&amp;D Forum</div>
+        <div class="note">On-edge disease classification using PPG/ECG signals</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT (hidden automatically until something is filled in config.js) ============ -->
+  <section id="contact" class="section contact" data-hide-when-empty>
+    <div class="left">
+      <h2>Contact</h2>
+      <a class="email" data-link="email" data-show-value href="#">Email</a>
+    </div>
+    <div class="social">
+      <a data-link="github" href="#">GitHub ↗</a>
+      <a data-link="linkedin" href="#">LinkedIn ↗</a>
+      <a data-link="scholar" href="#">Google Scholar ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="wrap">© <span id="year">2026</span> Karthik Maddimsetti</div>
+</footer>
+
+<script src="config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
