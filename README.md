@@ -9,7 +9,7 @@ GitHub Pages builds this site automatically with Jekyll whenever something chang
 1. Go to **https://app.pagescms.org** and sign in with GitHub.
 2. Open the **karthik-portfolio** repository.
 3. Use the menu on the left:
-   - **Profile & home page**: name, bio, photo, email, CV, GitHub/LinkedIn/Scholar links, the four highlight boxes, research interest, publications.
+   - **Profile & home page**: name, bio, photo, email, CV, GitHub/LinkedIn/Scholar links, CGPA line, research interest, publications.
    - **Projects**: one entry per project card. Add, reorder (with the *Position* number) or delete projects. Upload a card image.
 4. Click **Save**. The live site updates in about a minute.
 
@@ -21,7 +21,7 @@ Any field left empty is hidden on the site. For example, the Contact section app
 
 | To change…                         | Edit this file                         |
 |-----------------------------------|----------------------------------------|
-| Intro, links, highlights, research, publications | `_data/profile.yml`        |
+| Intro, CGPA, links, research, publications | `_data/profile.yml`        |
 | A project card or its write-up    | `_projects/<name>.md`                  |
 | Add a project                     | Copy any file in `_projects/`, rename it, edit it |
 | Colours, fonts, spacing           | `css/style.css` (the `:root` block at the top) |

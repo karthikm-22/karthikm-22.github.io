@@ -36,20 +36,14 @@ p{text-wrap:pretty}
 .hero-text{flex:999 1 460px;display:flex;flex-direction:column;gap:22px;min-width:0}
 .hero h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(42px,6vw,68px);line-height:1;letter-spacing:-.015em}
 .hero p{margin:0;font-size:18px;line-height:1.6;color:var(--body);max-width:560px}
+.hero .cgpa{margin-top:-8px;font-family:var(--mono);font-size:15px;font-weight:500;color:var(--ink)}
+.hero .cgpa .label{font-size:12px;margin-right:6px}
 .actions{display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding-top:6px}
 .actions a{font-size:14px;font-weight:500}
 .btn{padding:12px 22px;background:var(--ink);color:var(--bg)!important;border-radius:6px}
 .btn:hover{background:#000;text-decoration:none}
 .hero-photo{flex:1 1 220px;max-width:280px}
 .hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;display:block}
-
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line-2);border-top:1px solid var(--ink);border-bottom:1px solid var(--line-2)}
-.stats>div{background:var(--bg);padding:22px 16px;display:flex;flex-direction:column;gap:8px}
-.stats>div:first-child{padding-left:0}
-.stats .big{font-family:var(--serif);font-size:30px;line-height:1}
-.stats .big small{font-size:18px;color:var(--muted)}
-.stats .small{font-size:13px;color:var(--body);line-height:1.4}
 
 /* sections */
 .section{padding:64px 0;border-top:1px solid var(--ink);scroll-margin-top:64px}
@@ -59,7 +53,7 @@ p{text-wrap:pretty}
 .split>.body{flex:999 1 520px;display:flex;flex-direction:column;gap:16px;min-width:0}
 
 /* projects */
-.projects{display:flex;flex-direction:column;gap:36px;padding:80px 0;scroll-margin-top:64px}
+.projects{display:flex;flex-direction:column;gap:36px;padding:80px 0;border-top:1px solid var(--ink);scroll-margin-top:64px}
 .projects-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:56px 36px}
 .card{display:flex;flex-direction:column;gap:18px;min-width:0;color:var(--ink)}

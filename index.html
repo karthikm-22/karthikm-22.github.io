@@ -27,6 +27,7 @@ layout: default
     <div class="hero-text">
       <div class="eyebrow">{{ p.eyebrow }}</div>
       <h1>{{ p.name }}</h1>
+      {%- if p.cgpa and p.cgpa != "" %}<div class="cgpa"><span class="label">CGPA</span> {{ p.cgpa }}</div>{% endif %}
       <p>{{ p.bio }}</p>
       {%- capture has_actions -%}{{ p.cv }}{{ p.github }}{{ p.linkedin }}{%- endcapture -%}
       {%- if has_actions != "" %}
@@ -42,13 +43,6 @@ layout: default
     {%- endif %}
   </header>
 
-  {%- if p.stats.size > 0 %}
-  <section class="stats" aria-label="Highlights">
-    {%- for s in p.stats %}
-    <div><span class="big">{{ s.value }}{% if s.suffix and s.suffix != "" %}<small> {{ s.suffix }}</small>{% endif %}</span><span class="small">{{ s.label }}</span></div>
-    {%- endfor %}
-  </section>
-  {%- endif %}
 
   <section id="projects" class="projects">
     <div class="projects-head">

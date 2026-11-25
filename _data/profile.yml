@@ -11,6 +11,9 @@ bio: >-
   I design hardware architectures for signal-processing algorithms,
   from RTL and FPGA to fabricated silicon.
 
+# Shown as a line of text right under the name
+cgpa: "9.84 / 10"
+
 photo: ""        # e.g. images/profile.jpg  (portrait, about 800 × 1000 px)
 
 # Contact & links
@@ -19,21 +22,6 @@ cv: ""           # e.g. files/Karthik-Maddimsetti-CV.pdf
 github: ""       # e.g. https://github.com/karthikm-22
 linkedin: ""     # e.g. https://www.linkedin.com/in/...
 scholar: ""      # e.g. https://scholar.google.com/citations?user=...
-
-# The four highlight numbers under the intro
-stats:
-  - value: "9.84"
-    suffix: "/ 10"
-    label: CPI, BTech Electronics & VLSI Design
-  - value: Taped out
-    suffix: ""
-    label: 8-bit processor fabricated at SCL Chandigarh
-  - value: Lead author
-    suffix: ""
-    label: CMES-2027, IIT Guwahati (under review)
-  - value: Top 15
-    suffix: ""
-    label: Nationally, ICEdge 2025 R&D Forum, IISc
 
 # Shown next to the "Projects" heading
 project_tags: ASIC · FPGA · DSP · Biomedical

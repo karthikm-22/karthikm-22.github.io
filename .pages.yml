@@ -23,20 +23,13 @@ content:
       - { name: name, label: Name, type: string, required: true }
       - { name: eyebrow, label: Small line above the name, type: string }
       - { name: bio, label: Short bio, type: text }
+      - { name: cgpa, label: CGPA (shown under the name), type: string }
       - { name: photo, label: Profile photo (portrait), type: image, media: images }
       - { name: email, label: Email, type: string }
       - { name: cv, label: CV (PDF), type: file, media: files }
       - { name: github, label: GitHub URL, type: string }
       - { name: linkedin, label: LinkedIn URL, type: string }
       - { name: scholar, label: Google Scholar URL, type: string }
-      - name: stats
-        label: Highlights (the 4 boxes under the intro)
-        type: object
-        list: true
-        fields:
-          - { name: value, label: Big text, type: string }
-          - { name: suffix, label: Small text after it (optional), type: string }
-          - { name: label, label: Caption, type: string }
       - { name: project_tags, label: Tags next to the Projects heading, type: string }
       - name: research
         label: Research interest
