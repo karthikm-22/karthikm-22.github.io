@@ -10,7 +10,7 @@ layout: default
 <nav class="topnav subnav" aria-label="Project">
   <div class="wrap">
     <a class="back" href="{{ '/#projects' | relative_url }}">← All projects</a>
-    {%- if page.report != blank %}
+    {%- if page.report and page.report != "" %}
     <a class="outline-btn" href="{{ page.report | relative_url }}" target="_blank" rel="noopener">Full report (PDF)</a>
     {%- endif %}
   </div>
@@ -30,7 +30,7 @@ layout: default
     {%- endif %}
   </header>
 
-  {%- if page.cover != blank %}
+  {%- if page.cover and page.cover != "" %}
   <figure>
     <div class="frame"><img src="{{ page.cover | relative_url }}" alt="{{ page.title }}"></div>
     {%- if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
@@ -53,7 +53,7 @@ layout: default
 
   <footer class="p-foot">
     <a href="{{ '/#projects' | relative_url }}" style="color:var(--ink)">← Back to all projects</a>
-    {%- if page.report != blank %}
+    {%- if page.report and page.report != "" %}
     <a href="{{ page.report | relative_url }}" target="_blank" rel="noopener">Full report (PDF) ↗</a>
     {%- endif %}
   </footer>
