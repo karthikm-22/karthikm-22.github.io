@@ -1,0 +1,95 @@
+# Pages CMS configuration: gives the site an editing panel at https://app.pagescms.org
+# (sign in with GitHub, pick this repository). See README.md.
+
+media:
+  - name: images
+    label: Images
+    input: images
+    output: images
+    categories: [image]
+  - name: files
+    label: Documents (CV, reports)
+    input: files
+    output: files
+    categories: [document]
+
+content:
+  # ── Home page: intro, links, highlights, research, publications ──
+  - name: profile
+    label: Profile & home page
+    type: file
+    path: _data/profile.yml
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - { name: eyebrow, label: Small line above the name, type: string }
+      - { name: bio, label: Short bio, type: text }
+      - { name: photo, label: Profile photo (portrait), type: image, media: images }
+      - { name: email, label: Email, type: string }
+      - { name: cv, label: CV (PDF), type: file, media: files }
+      - { name: github, label: GitHub URL, type: string }
+      - { name: linkedin, label: LinkedIn URL, type: string }
+      - { name: scholar, label: Google Scholar URL, type: string }
+      - name: stats
+        label: Highlights (the 4 boxes under the intro)
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Big text, type: string }
+          - { name: suffix, label: Small text after it (optional), type: string }
+          - { name: label, label: Caption, type: string }
+      - { name: project_tags, label: Tags next to the Projects heading, type: string }
+      - name: research
+        label: Research interest
+        type: object
+        fields:
+          - { name: question, label: Main statement, type: text }
+          - { name: text, label: Supporting paragraph, type: text }
+      - name: publications
+        label: Publications & awards
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Small label (venue / year), type: string }
+          - { name: title, label: Title, type: string }
+          - { name: note, label: Note, type: string }
+
+  # ── Projects: one entry per card; add a write-up to get a full page ──
+  - name: projects
+    label: Projects
+    type: collection
+    path: _projects
+    filename: "{fields.order}-{primary}.md"
+    view:
+      fields: [title, tag, order]
+      primary: title
+      sort: [order]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: order, label: Position on the home page (1 = first), type: number }
+      - { name: tag, label: Category line (e.g. FPGA · Image Processing), type: string }
+      - { name: summary, label: Card summary, type: text }
+      - { name: meta, label: Key numbers line (optional), type: string }
+      - { name: image, label: Card image (landscape), type: image, media: images }
+      - { name: mark, label: Short label shown when there is no image, type: string }
+      # Detail page (optional) — only appears when the Write-up below has text
+      - { name: heading, label: "Page: long title (optional)", type: string }
+      - { name: eyebrow, label: "Page: small line above the title", type: string }
+      - { name: intro, label: "Page: intro paragraph", type: text }
+      - name: facts
+        label: "Page: facts row (Author, Platform, Tools…)"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+      - { name: cover, label: "Page: big cover image", type: image, media: images }
+      - { name: cover_caption, label: "Page: cover caption", type: string }
+      - name: numbers
+        label: "Page: key numbers strip"
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Number, type: string }
+          - { name: label, label: Label, type: string }
+      - { name: report, label: "Page: full report (PDF)", type: file, media: files }
+      - { name: body, label: "Write-up (leave empty for a card without its own page)", type: rich-text }
