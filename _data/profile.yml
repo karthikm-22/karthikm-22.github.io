@@ -16,7 +16,7 @@ cgpa: "9.84 / 10"
 photo: ""        # e.g. images/profile.jpg  (portrait, about 800 × 1000 px)
 
 # Contact & links
-email: ""        # e.g. karthik@example.com
+email: karthik.vssr@gmail.com
 cv: ""           # e.g. files/Karthik-Maddimsetti-CV.pdf
 github: ""       # e.g. https://github.com/karthikm-22
 linkedin: ""     # e.g. https://www.linkedin.com/in/...
@@ -42,3 +42,27 @@ publications:
   - label: 2025 · IISc Bangalore
     title: Top 15 nationally, ICEdge 2025 R&D Forum
     note: On-edge disease classification using PPG/ECG signals
+
+# About section at the bottom of the home page (placeholder text for now)
+about:
+  - >-
+    Placeholder paragraph. A short introduction to Karthik will go here: what
+    he studies, what kind of hardware he likes to build, and what ties his
+    projects together.
+  - >-
+    Placeholder paragraph. A second paragraph on how he approaches design work,
+    what he cares about beyond the simulation, and what he wants to work on next.
+
+# Skills table next to the About text (placeholder rows for now)
+skills:
+  - label: ASIC & Layout
+    value: Cadence Virtuoso, Physical Design
+  - label: FPGA & RTL
+    value: Verilog, Xilinx Nexys7
+  - label: Analog & Lab
+    value: Filter Design, Oscilloscope
+  - label: Embedded
+    value: ESP32, UART
+  - label: Code & Tools
+    value: MATLAB, Python
+

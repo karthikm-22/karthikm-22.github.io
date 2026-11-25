@@ -92,16 +92,41 @@ layout: default
   </section>
   {%- endif %}
 
+  {%- if p.about.size > 0 or p.skills.size > 0 %}
+  <section id="about" class="section about">
+    {%- if p.about.size > 0 %}
+    <div class="col">
+      <div class="kicker">About</div>
+      <h2>Background</h2>
+      <div class="about-text">
+        {%- for para in p.about %}
+        <p class="para">{{ para }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+    {%- if p.skills.size > 0 %}
+    <div class="col">
+      <div class="kicker">Toolbox</div>
+      <h2>Skills</h2>
+      <dl class="skills">
+        {%- for sk in p.skills %}
+        <div><dt>{{ sk.label }}</dt><dd>{{ sk.value }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+    {%- endif %}
+  </section>
+  {%- endif %}
+
   {%- if has_contact != "" %}
   <section id="contact" class="section contact">
-    <div class="left">
-      <h2>Contact</h2>
-      {%- if p.email and p.email != "" %}<a class="email" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
-    </div>
-    <div class="social">
-      {%- if p.github and p.github != "" %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
-      {%- if p.linkedin and p.linkedin != "" %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>{% endif %}
-      {%- if p.scholar and p.scholar != "" %}<a href="{{ p.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>{% endif %}
+    <div class="kicker">Contact</div>
+    <div class="contact-links">
+      {%- if p.email and p.email != "" %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+      {%- if p.linkedin and p.linkedin != "" %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+      {%- if p.github and p.github != "" %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {%- if p.scholar and p.scholar != "" %}<a href="{{ p.scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
     </div>
   </section>
   {%- endif %}

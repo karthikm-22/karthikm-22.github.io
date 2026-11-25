@@ -36,6 +36,14 @@ content:
         fields:
           - { name: question, label: Main statement, type: text }
           - { name: text, label: Supporting paragraph, type: text }
+      - { name: about, label: About paragraphs (bottom of home page), type: text, list: true }
+      - name: skills
+        label: Skills table (next to About)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Category, type: string }
+          - { name: value, label: Skills, type: string }
       - name: publications
         label: Publications & awards
         type: object

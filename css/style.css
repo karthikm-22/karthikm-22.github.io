@@ -75,17 +75,28 @@ a.card:hover{transform:translateY(-3px);text-decoration:none;color:var(--ink)}
   display:flex;align-items:center;justify-content:center}
 .thumb.empty span{font-family:var(--serif);font-size:44px;color:var(--muted);background:#efede7;padding:4px 14px;border-radius:6px;letter-spacing:-.01em}
 
-/* research / publications / contact */
+/* research / publications */
 .lede{margin:0;font-family:var(--serif);font-size:24px;line-height:1.4}
 .para{margin:0;font-size:16px;line-height:1.65;color:var(--body)}
 .pub{display:flex;flex-direction:column;gap:6px}
 .pub+.pub{padding-top:24px;border-top:1px solid var(--line)}
 .pub .title{font-family:var(--serif);font-size:21px;line-height:1.35}
 .pub .note{font-size:14px;color:var(--body)}
-.contact{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:end}
-.contact .left{display:flex;flex-direction:column;gap:10px}
-.contact .email{font-size:17px}
-.contact .social{display:flex;flex-wrap:wrap;gap:24px;font-size:14px}
+/* about + skills (two columns), contact */
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.09em;font-weight:500;color:var(--accent);text-transform:uppercase}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px 64px;align-items:start}
+.about .col{display:flex;flex-direction:column;gap:10px;min-width:0}
+.about h2{margin-bottom:14px}
+.about-text{display:flex;flex-direction:column;gap:16px}
+.about-text .para{font-size:16.5px;line-height:1.7}
+.skills{margin:0;border-top:1px dashed var(--line-2)}
+.skills>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:14px 0;border-bottom:1px dashed var(--line-2);font-family:var(--mono);font-size:13.5px;line-height:1.5}
+.skills dt{color:var(--muted)}
+.skills dd{margin:0;color:var(--ink);text-align:right}
+.contact{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px 28px;font-family:var(--mono);font-size:15px}
+.contact-links a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:4px}
+.contact-links a:hover{color:var(--accent);text-decoration-color:currentColor}
 .sitefoot{padding:28px 0 40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
 
 /* ---------- project detail page ---------- */
@@ -170,6 +181,12 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
   .card h3{font-size:22px}
   .lede{font-size:20px;line-height:1.45}
   .pub .title{font-size:19px}
+  .about{gap:44px}
+  .about-text .para{font-size:16px;line-height:1.65}
+  .skills>div{font-size:13px;padding:12px 0}
+  .contact-links{font-size:14px}
+  .skills>div{flex-direction:column}
+  .skills dd{text-align:left}
 
   /* project pages */
   .p-head{gap:16px;padding:36px 0 28px}
