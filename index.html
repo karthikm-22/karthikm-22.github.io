@@ -7,6 +7,8 @@ layout: default
 {%- endcomment -%}
 {%- assign p = site.data.profile -%}
 {%- assign projects = site.projects | sort: "order" -%}
+{%- capture research_count -%}{% for proj in projects %}{% if proj.research == true %}x{% endif %}{% endfor %}{%- endcapture -%}
+{%- capture has_research -%}{{ p.research.question }}{{ research_count }}{%- endcapture -%}
 {%- capture has_contact -%}{{ p.email }}{{ p.github }}{{ p.linkedin }}{{ p.scholar }}{%- endcapture -%}
 
 <nav class="topnav" aria-label="Main">
@@ -14,7 +16,7 @@ layout: default
     <a class="brand" href="#top">{{ p.name }}</a>
     <div class="links">
       <a href="#projects">Projects</a>
-      {%- if p.research.question and p.research.question != "" %}<a href="#research">Research</a>{% endif %}
+      {%- if has_research != "" %}<a href="#research">Research</a>{% endif %}
       {%- if p.publications.size > 0 %}<a href="#publications">Publications</a>{% endif %}
       {%- if has_contact != "" %}<a href="#contact">Contact</a>{% endif %}
     </div>
@@ -25,7 +27,6 @@ layout: default
 
   <header id="top" class="hero">
     <div class="hero-text">
-      <div class="eyebrow">{{ p.eyebrow }}</div>
       <h1>{{ p.name }}</h1>
       {%- if p.cgpa and p.cgpa != "" %}<div class="cgpa"><span class="label">CGPA</span> {{ p.cgpa }}</div>{% endif %}
       <p>{{ p.bio }}</p>
@@ -43,44 +44,36 @@ layout: default
     {%- endif %}
   </header>
 
-
   <section id="projects" class="projects">
     <div class="projects-head">
       <h2>Projects</h2>
-      <span class="meta">{{ projects.size | prepend: "0" | slice: -2, 2 }} PROJECTS{% if p.project_tags and p.project_tags != "" %} · {{ p.project_tags | upcase }}{% endif %}</span>
+      {%- if p.project_tags and p.project_tags != "" %}<span class="meta">{{ p.project_tags | upcase }}</span>{% endif %}
     </div>
     <div class="grid">
-      {%- for proj in projects %}
-      {%- assign body = proj.content | strip_html | strip -%}
-      {%- if body != "" %}
-      <a class="card" href="{{ proj.url | relative_url }}">
-      {%- else %}
-      <article class="card">
-      {%- endif %}
-        {% include thumb.html project=proj %}
-        <div class="card-body">
-          <div class="tag">{{ proj.tag }}</div>
-          <h3>{{ proj.title }}</h3>
-          <p>{{ proj.summary }}</p>
-          {%- if proj.meta and proj.meta != "" %}<div class="meta">{{ proj.meta }}</div>{% endif %}
-          {%- if body != "" %}<span class="more">Read full project →</span>{% endif %}
-        </div>
-      {%- if body != "" %}
-      </a>
-      {%- else %}
-      </article>
-      {%- endif %}
-      {%- endfor %}
+      {%- for proj in projects %}{% unless proj.research == true %}
+      {% include card.html project=proj %}
+      {%- endunless %}{% endfor %}
     </div>
   </section>
 
-  {%- if p.research.question and p.research.question != "" %}
-  <section id="research" class="section split">
-    <h2>Research interest</h2>
-    <div class="body">
-      <p class="lede">{{ p.research.question }}</p>
-      {%- if p.research.text and p.research.text != "" %}<p class="para">{{ p.research.text }}</p>{% endif %}
+  {%- if has_research != "" %}
+  <section id="research" class="section research">
+    <div class="split">
+      <h2>Research</h2>
+      {%- if p.research.question and p.research.question != "" %}
+      <div class="body">
+        <p class="lede">{{ p.research.question }}</p>
+        {%- if p.research.text and p.research.text != "" %}<p class="para">{{ p.research.text }}</p>{% endif %}
+      </div>
+      {%- endif %}
     </div>
+    {%- if research_count != "" %}
+    <div class="grid">
+      {%- for proj in projects %}{% if proj.research == true %}
+      {% include card.html project=proj %}
+      {%- endif %}{% endfor %}
+    </div>
+    {%- endif %}
   </section>
   {%- endif %}
 

@@ -1,0 +1,21 @@
+{%- comment -%} One project card. Links to the project page when the project has a write-up. {%- endcomment -%}
+{%- assign card_proj = include.project -%}
+{%- assign body = card_proj.content | strip_html | strip -%}
+{%- if body != "" %}
+<a class="card" href="{{ card_proj.url | relative_url }}">
+{%- else %}
+<article class="card">
+{%- endif %}
+  {% include thumb.html project=card_proj %}
+  <div class="card-body">
+    <div class="tag">{{ card_proj.tag }}</div>
+    <h3>{{ card_proj.title }}</h3>
+    <p>{{ card_proj.summary }}</p>
+    {%- if card_proj.meta and card_proj.meta != "" %}<div class="meta">{{ card_proj.meta }}</div>{% endif %}
+    {%- if body != "" %}<span class="more">Read full project →</span>{% endif %}
+  </div>
+{%- if body != "" %}
+</a>
+{%- else %}
+</article>
+{%- endif %}

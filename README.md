@@ -10,7 +10,7 @@ GitHub Pages builds this site automatically with Jekyll whenever something chang
 2. Open the **karthik-portfolio** repository.
 3. Use the menu on the left:
    - **Profile & home page**: name, bio, photo, email, CV, GitHub/LinkedIn/Scholar links, CGPA line, research interest, publications.
-   - **Projects**: one entry per project card. Add, reorder (with the *Position* number) or delete projects. Upload a card image.
+   - **Projects**: one entry per project card. Add, reorder (with the *Position* number) or delete projects. Upload a card image. Tick *Show under Research* to list a project in the Research section instead of Projects.
 4. Click **Save**. The live site updates in about a minute.
 
 **Giving a project its own page:** write something in the project's *Write-up* box (headings, text, images and lists all work). The card then links to a full page like the PPG one. Projects with an empty Write-up stay as plain cards.
@@ -40,6 +40,7 @@ summary: One or two sentences for the card.
 meta: 2.015 ms per 256 × 256 image
 image: images/sobel.jpg       # optional card image
 mark: FPGA                    # shown on the tile when there's no image
+research: true                # optional: list under Research instead of Projects
 ---
 
 ## Optional write-up
@@ -50,7 +51,7 @@ Anything written here turns the card into a full project page.
 *Fig. 1 — The italic line right under an image becomes its caption.*
 ```
 
-`_projects/ppg-front-end.md` shows every optional page field: intro, facts row, cover image, key numbers strip and report PDF.
+`_projects/ppg-front-end.md` shows every optional page field: intro, facts row, cover image and report PDF.
 
 ## Moving the site to Karthik's account
 

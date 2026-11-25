@@ -37,14 +37,6 @@ layout: default
   </figure>
   {%- endif %}
 
-  {%- if page.numbers and page.numbers.size > 0 %}
-  <section class="kpis" aria-label="Key figures">
-    {%- for n in page.numbers %}
-    <div><span class="v">{{ n.value }}</span><span class="k">{{ n.label }}</span></div>
-    {%- endfor %}
-  </section>
-  {%- endif %}
-
   <nav class="toc" id="toc" aria-label="Sections"></nav>
 
   <article class="article prose">

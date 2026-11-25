@@ -21,7 +21,6 @@ content:
     path: _data/profile.yml
     fields:
       - { name: name, label: Name, type: string, required: true }
-      - { name: eyebrow, label: Small line above the name, type: string }
       - { name: bio, label: Short bio, type: text }
       - { name: cgpa, label: CGPA (shown under the name), type: string }
       - { name: photo, label: Profile photo (portrait), type: image, media: images }
@@ -61,6 +60,7 @@ content:
       - { name: order, label: Position on the home page (1 = first), type: number }
       - { name: tag, label: Category line (e.g. FPGA · Image Processing), type: string }
       - { name: summary, label: Card summary, type: text }
+      - { name: research, label: Show under Research (not Projects), type: boolean }
       - { name: meta, label: Key numbers line (optional), type: string }
       - { name: image, label: Card image (landscape), type: image, media: images }
       - { name: mark, label: Short label shown when there is no image, type: string }
@@ -77,12 +77,5 @@ content:
           - { name: value, label: Value, type: string }
       - { name: cover, label: "Page: big cover image", type: image, media: images }
       - { name: cover_caption, label: "Page: cover caption", type: string }
-      - name: numbers
-        label: "Page: key numbers strip"
-        type: object
-        list: true
-        fields:
-          - { name: value, label: Number, type: string }
-          - { name: label, label: Label, type: string }
       - { name: report, label: "Page: full report (PDF)", type: file, media: files }
       - { name: body, label: "Write-up (leave empty for a card without its own page)", type: rich-text }

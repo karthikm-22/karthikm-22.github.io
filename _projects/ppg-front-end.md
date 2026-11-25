@@ -20,17 +20,6 @@ facts:
     value: Oscilloscope, MATLAB
 cover: images/ppg/p5-6.jpg
 cover_caption: "Fig. 1 — Complete circuit on breadboard: PPG probe, acquisition circuit, two filter stages, potentiometer and ESP32."
-numbers:
-  - value: 0.5 Hz
-    label: High-pass cut-off
-  - value: 3.4 Hz
-    label: Low-pass cut-off
-  - value: "48"
-    label: Gain per active stage
-  - value: 2 V
-    label: Reference level shift
-  - value: ≈ 85 bpm
-    label: Estimated heart rate
 report: files/PPG-Report.pdf
 ---
 
@@ -40,10 +29,6 @@ Photoplethysmography is an optical method to measure blood-volume changes in tis
 
 ![Typical PPG cycle with labelled features](images/ppg/p1-1.png)
 *Fig. 2 — A typical PPG cycle. Source: ResearchGate (see report).*
-
-- **Systolic peak.** The largest, primary peak. Maximum arterial blood volume when the left ventricle ejects blood.
-- **Dicrotic notch.** A small dip marking the closure of the aortic valve and a momentary pressure drop.
-- **Diastolic peak.** A smaller bump formed by the blood wave reflected from the lower parts of the arteries.
 
 ### Why the DC component matters
 
@@ -58,10 +43,6 @@ A portion of the emitted light is absorbed by the skin, bones and tissues indepe
 *Fig. 4 — (a) Transmission mode, (b) Reflectance mode. Source: Chapter 2 of [1].*
 
 This design uses transmission mode, where the emitter and receiver are on opposite sides of the fingertip.
-
-- **Better SNR.** Deeper penetration through pulsating arteries gives clearer AC components than scattered reflected light.
-- **Less motion-sensitive.** The light path is a well-defined straight line; in reflectance mode slight motion alters scattering angles.
-- **Trade-off.** Needs thin body parts such as the fingertip or earlobe, so it is less flexible for multi-site monitoring.
 
 ## Acquisition circuit
 
@@ -78,15 +59,6 @@ The useful signal lies between 0.5 Hz and 8 Hz, on top of a large unwanted DC co
 
 ![Two-stage band-pass conditioning circuit](images/ppg/p4-5.png)
 *Fig. 6 — Two cascaded stages with a potentiometer between them.*
-
-- **Passive CR high-pass:** `fc = 1 / 2πRC = 0.5 Hz`. Removes the DC offset from tissue absorption. No amplification needed, so a passive network is used.
-- **Active low-pass:** `fc = 1 / 2πRfC = 3.4 Hz`, `G = 1 + Rf/Ri = 48`. Amplifies the pulsatile frequencies.
-
-### Design decisions
-
-- **Two moderate stages.** Prevents op-amp saturation, since AC and DC levels vary from person to person, and reduces noise amplification because the second stage receives an already-filtered input.
-- **Potentiometer.** Allows user-specific calibration of the intermediate gain so the output stays within the op-amp's linear range across users and lighting conditions.
-- **Vref = 2 V.** Shifts the waveform upward so it lies entirely within the microcontroller ADC's input range, which cannot process negative voltages.
 
 ## Results
 
