@@ -51,7 +51,7 @@ Anything written here turns the card into a full project page.
 *Fig. 1 — The italic line right under an image becomes its caption.*
 ```
 
-`_projects/ppg-front-end.md` shows every optional page field: intro, facts row, cover image and report PDF.
+`_projects/ppg-front-end.md` shows every optional page field: intro, cover image and report PDF.
 
 ## Moving the site to Karthik's account
 

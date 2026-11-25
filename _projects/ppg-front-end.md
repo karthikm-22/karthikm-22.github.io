@@ -11,13 +11,6 @@ mark: PPG
 heading: Photoplethysmography Signal Acquisition and Conditioning
 eyebrow: Individual Project · Analog Front End · Biomedical
 intro: An analog front-end for PPG signal processing, as a fundamental module for applications like estimation of heart rate, SBP and DBP, and blood glucose levels on wearable devices.
-facts:
-  - label: Author
-    value: Karthik Maddimsetti
-  - label: Platform
-    value: Breadboard, ESP32
-  - label: Tools
-    value: Oscilloscope, MATLAB
 cover: images/ppg/p5-6.jpg
 cover_caption: "Fig. 1 — Complete circuit on breadboard: PPG probe, acquisition circuit, two filter stages, potentiometer and ESP32."
 report: files/PPG-Report.pdf

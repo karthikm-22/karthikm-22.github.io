@@ -21,13 +21,6 @@ layout: default
     <div class="eyebrow">{{ page.eyebrow | default: page.tag }}</div>
     <h1>{{ page.heading | default: page.title }}</h1>
     {%- if page.intro %}<p>{{ page.intro }}</p>{% endif %}
-    {%- if page.facts and page.facts.size > 0 %}
-    <div class="facts">
-      {%- for f in page.facts %}
-      <div><span class="label">{{ f.label }}</span>{{ f.value }}</div>
-      {%- endfor %}
-    </div>
-    {%- endif %}
   </header>
 
   {%- if page.cover and page.cover != "" %}
