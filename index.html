@@ -14,9 +14,9 @@ layout: default
     <a class="brand" href="#top">{{ p.name }}</a>
     <div class="links">
       <a href="#projects">Projects</a>
-      {%- if p.research.question != blank %}<a href="#research">Research</a>{% endif %}
+      {%- if p.research.question and p.research.question != "" %}<a href="#research">Research</a>{% endif %}
       {%- if p.publications.size > 0 %}<a href="#publications">Publications</a>{% endif %}
-      {%- if has_contact != blank %}<a href="#contact">Contact</a>{% endif %}
+      {%- if has_contact != "" %}<a href="#contact">Contact</a>{% endif %}
     </div>
   </div>
 </nav>
@@ -28,15 +28,16 @@ layout: default
       <div class="eyebrow">{{ p.eyebrow }}</div>
       <h1>{{ p.name }}</h1>
       <p>{{ p.bio }}</p>
-      {%- if p.cv != blank or p.github != blank or p.linkedin != blank %}
+      {%- capture has_actions -%}{{ p.cv }}{{ p.github }}{{ p.linkedin }}{%- endcapture -%}
+      {%- if has_actions != "" %}
       <div class="actions">
-        {%- if p.cv != blank %}<a class="btn" href="{{ p.cv | relative_url }}" target="_blank" rel="noopener">Download CV</a>{% endif %}
-        {%- if p.github != blank %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
-        {%- if p.linkedin != blank %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>{% endif %}
+        {%- if p.cv and p.cv != "" %}<a class="btn" href="{{ p.cv | relative_url }}" target="_blank" rel="noopener">Download CV</a>{% endif %}
+        {%- if p.github and p.github != "" %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+        {%- if p.linkedin and p.linkedin != "" %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>{% endif %}
       </div>
       {%- endif %}
     </div>
-    {%- if p.photo != blank %}
+    {%- if p.photo and p.photo != "" %}
     <div class="hero-photo"><img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}"></div>
     {%- endif %}
   </header>
@@ -44,7 +45,7 @@ layout: default
   {%- if p.stats.size > 0 %}
   <section class="stats" aria-label="Highlights">
     {%- for s in p.stats %}
-    <div><span class="big">{{ s.value }}{% if s.suffix != blank %}<small> {{ s.suffix }}</small>{% endif %}</span><span class="small">{{ s.label }}</span></div>
+    <div><span class="big">{{ s.value }}{% if s.suffix and s.suffix != "" %}<small> {{ s.suffix }}</small>{% endif %}</span><span class="small">{{ s.label }}</span></div>
     {%- endfor %}
   </section>
   {%- endif %}
@@ -52,7 +53,7 @@ layout: default
   <section id="projects" class="projects">
     <div class="projects-head">
       <h2>Projects</h2>
-      <span class="meta">{{ projects.size | prepend: "0" | slice: -2, 2 }} PROJECTS{% if p.project_tags != blank %} · {{ p.project_tags | upcase }}{% endif %}</span>
+      <span class="meta">{{ projects.size | prepend: "0" | slice: -2, 2 }} PROJECTS{% if p.project_tags and p.project_tags != "" %} · {{ p.project_tags | upcase }}{% endif %}</span>
     </div>
     <div class="grid">
       {%- for proj in projects %}
@@ -67,7 +68,7 @@ layout: default
           <div class="tag">{{ proj.tag }}</div>
           <h3>{{ proj.title }}</h3>
           <p>{{ proj.summary }}</p>
-          {%- if proj.meta != blank %}<div class="meta">{{ proj.meta }}</div>{% endif %}
+          {%- if proj.meta and proj.meta != "" %}<div class="meta">{{ proj.meta }}</div>{% endif %}
           {%- if body != "" %}<span class="more">Read full project →</span>{% endif %}
         </div>
       {%- if body != "" %}
@@ -79,12 +80,12 @@ layout: default
     </div>
   </section>
 
-  {%- if p.research.question != blank %}
+  {%- if p.research.question and p.research.question != "" %}
   <section id="research" class="section split">
     <h2>Research interest</h2>
     <div class="body">
       <p class="lede">{{ p.research.question }}</p>
-      {%- if p.research.text != blank %}<p class="para">{{ p.research.text }}</p>{% endif %}
+      {%- if p.research.text and p.research.text != "" %}<p class="para">{{ p.research.text }}</p>{% endif %}
     </div>
   </section>
   {%- endif %}
@@ -97,23 +98,23 @@ layout: default
       <div class="pub">
         <div class="label">{{ pub.label }}</div>
         <div class="title">{{ pub.title }}</div>
-        {%- if pub.note != blank %}<div class="note">{{ pub.note }}</div>{% endif %}
+        {%- if pub.note and pub.note != "" %}<div class="note">{{ pub.note }}</div>{% endif %}
       </div>
       {%- endfor %}
     </div>
   </section>
   {%- endif %}
 
-  {%- if has_contact != blank %}
+  {%- if has_contact != "" %}
   <section id="contact" class="section contact">
     <div class="left">
       <h2>Contact</h2>
-      {%- if p.email != blank %}<a class="email" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+      {%- if p.email and p.email != "" %}<a class="email" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
     </div>
     <div class="social">
-      {%- if p.github != blank %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
-      {%- if p.linkedin != blank %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>{% endif %}
-      {%- if p.scholar != blank %}<a href="{{ p.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>{% endif %}
+      {%- if p.github and p.github != "" %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+      {%- if p.linkedin and p.linkedin != "" %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>{% endif %}
+      {%- if p.scholar and p.scholar != "" %}<a href="{{ p.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>{% endif %}
     </div>
   </section>
   {%- endif %}
