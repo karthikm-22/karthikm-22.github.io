@@ -1,5 +1,5 @@
 {%- comment -%} Project thumbnail: the photo if set, otherwise a tidy grid tile with the project's mark. {%- endcomment -%}
-{%- if include.project.image != blank -%}
+{%- if include.project.image and include.project.image != "" -%}
 <div class="thumb"><img src="{{ include.project.image | relative_url }}" alt="{{ include.project.title }}" loading="lazy"></div>
 {%- else -%}
 <div class="thumb empty"><span aria-hidden="true">{{ include.project.mark | default: include.project.title | truncate: 6, "" }}</span></div>
