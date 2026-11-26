@@ -90,7 +90,8 @@ a.card:hover{transform:translateY(-3px);text-decoration:none;color:var(--ink)}
 .about-text{display:flex;flex-direction:column;gap:16px}
 .about-text .para{font-size:16.5px;line-height:1.7}
 .skills{margin:0;border-top:1px dashed var(--line-2)}
-.skills>div{display:grid;grid-template-columns:11em 1fr;align-items:baseline;gap:4px 20px;padding:14px 0;border-bottom:1px dashed var(--line-2);font-family:var(--mono);font-size:13.5px;line-height:1.5}
+.skills{display:grid;grid-template-columns:max-content 1fr}
+.skills>div{display:grid;grid-column:1/-1;grid-template-columns:subgrid;align-items:baseline;gap:4px 20px;padding:14px 0;border-bottom:1px dashed var(--line-2);font-family:var(--mono);font-size:13.5px;line-height:1.5}
 .skills dt{color:var(--muted)}
 .skills dd{margin:0;color:var(--ink);text-align:right}
 .contact{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
