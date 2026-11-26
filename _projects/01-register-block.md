@@ -6,6 +6,13 @@ summary: An 8-bit register block interfacing with the ALU and bus, laid out in C
 meta: 110 MHz · 13110.188 µm² · AR 1.033
 image: ""
 mark: ASIC
+
+heading: 8-bit Processor: Register Block
+eyebrow: ASIC · Physical Design
+intro: An 8-bit register block interfacing with the ALU and bus, laid out in Cadence Virtuoso for minimum area and fabricated at SCL Chandigarh.
+cover: images/8bit/cadence_img.jpg
+cover_caption: "Fig. 1 — Complete circuit on breadboard: PPG probe, acquisition circuit, two filter stages, potentiometer and ESP32."
+report: files/PPG-Report.pdf
 ---
 
 ## Design and Implementation
