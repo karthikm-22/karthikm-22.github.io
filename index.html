@@ -9,14 +9,14 @@ layout: default
 {%- assign projects = site.projects | sort: "order" -%}
 {%- capture research_count -%}{% for proj in projects %}{% if proj.research == true %}x{% endif %}{% endfor %}{%- endcapture -%}
 {%- capture has_research -%}{{ p.research.question }}{{ research_count }}{%- endcapture -%}
-{%- capture has_contact -%}{{ p.email }}{{ p.github }}{{ p.linkedin }}{{ p.scholar }}{%- endcapture -%}
+{%- capture has_contact -%}{{ p.email }}{{ p.phone }}{{ p.github }}{{ p.linkedin }}{{ p.scholar }}{%- endcapture -%}
 
 <nav class="topnav" aria-label="Main">
   <div class="wrap">
     <a class="brand" href="#top">{{ p.name }}</a>
     <div class="links">
-      <a href="#projects">Projects</a>
       {%- if has_research != "" %}<a href="#research">Research</a>{% endif %}
+      <a href="#projects">Projects</a>
       {%- if p.publications.size > 0 %}<a href="#publications">Publications</a>{% endif %}
       {%- if has_contact != "" %}<a href="#contact">Contact</a>{% endif %}
     </div>
@@ -44,18 +44,6 @@ layout: default
     {%- endif %}
   </header>
 
-  <section id="projects" class="projects">
-    <div class="projects-head">
-      <h2>Projects</h2>
-      {%- if p.project_tags and p.project_tags != "" %}<span class="meta">{{ p.project_tags | upcase }}</span>{% endif %}
-    </div>
-    <div class="grid">
-      {%- for proj in projects %}{% unless proj.research == true %}
-      {% include card.html project=proj %}
-      {%- endunless %}{% endfor %}
-    </div>
-  </section>
-
   {%- if has_research != "" %}
   <section id="research" class="section research">
     <div class="split">
@@ -76,6 +64,18 @@ layout: default
     {%- endif %}
   </section>
   {%- endif %}
+
+  <section id="projects" class="projects">
+    <div class="projects-head">
+      <h2>Projects</h2>
+      {%- if p.project_tags and p.project_tags != "" %}<span class="meta">{{ p.project_tags | upcase }}</span>{% endif %}
+    </div>
+    <div class="grid">
+      {%- for proj in projects %}{% unless proj.research == true %}
+      {% include card.html project=proj %}
+      {%- endunless %}{% endfor %}
+    </div>
+  </section>
 
   {%- if p.publications.size > 0 %}
   <section id="publications" class="section split">
@@ -124,6 +124,7 @@ layout: default
     <div class="kicker">Contact</div>
     <div class="contact-links">
       {%- if p.email and p.email != "" %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+      {%- if p.phone and p.phone != "" %}<a href="tel:{{ p.phone | remove: ' ' }}">{{ p.phone }}</a>{% endif %}
       {%- if p.linkedin and p.linkedin != "" %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
       {%- if p.github and p.github != "" %}<a href="{{ p.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
       {%- if p.scholar and p.scholar != "" %}<a href="{{ p.scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
