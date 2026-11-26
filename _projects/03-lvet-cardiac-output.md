@@ -43,4 +43,4 @@ The heart-sound segmentation algorithm was validated on 2,192 recordings from Ph
 
 ## Continuing work
 
-As a summer research intern (May–July 2026), Karthik extended this into a computationally light framework for uncalibrated, beat-to-beat stroke volume estimation using a Windkessel model, evaluating how physiologically significant the multimodal cardiovascular features are and how they relate to each other.
+During a summer research internship (May–July 2026), I extended this into a computationally light framework for uncalibrated, beat-to-beat stroke volume estimation using a Windkessel model, evaluating how physiologically significant the multimodal cardiovascular features are and how they relate to each other.
