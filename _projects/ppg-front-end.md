@@ -59,6 +59,12 @@ CH1 shows the filtered signal and CH2 the raw signal (on different voltage scale
 *Fig. 7b — CH2 at 50.0 mV/div.*
 
 
+## Continued in the ULP-IC Lab
+
+This front end grew into a research system in the ULP-IC Lab at DAU, under Prof. Biswajit Mishra. The later PPG acquisition system uses a two-stage analog front end with a transimpedance amplification stage and filtering, on a custom PCB. Karthik handled the circuit design and PCB design himself, and validated the system by capturing PPG waveforms with visible morphological features such as the dicrotic notch.
+
+On top of it, he developed a rule-based arterial-stiffness classification algorithm. It uses morphological features from the first and second derivatives of the PPG signal to sort subjects into two stiffness categories.
+
 ## References
 
 1. E. Mejía-Mejía, J. Allen, K. Budidha, C. El-Hajj, P. A. Kyriacou, P. H. Charlton. *Photoplethysmography Signal Processing and Synthesis*, Chapters 2 and 3.
