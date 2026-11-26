@@ -30,13 +30,6 @@ A portion of the emitted light is absorbed by the skin, bones and tissues indepe
 ![AC and DC components of a PPG signal](images/ppg/p2-2.png)
 *Fig. 3 — AC vs. DC components.*
 
-## Acquisition modes
-
-![Transmission mode vs reflectance mode](images/ppg/p3-3.png)
-*Fig. 4 — (a) Transmission mode, (b) Reflectance mode. Source: Chapter 2 of [1].*
-
-This design uses transmission mode, where the emitter and receiver are on opposite sides of the fingertip.
-
 ## Acquisition circuit
 
 The EN signal switches the IR LED on, which emits infrared light through the finger. The photodiode produces a photocurrent depending on the intensity of light received from the other side, which depends on the amount of light absorbed by the blood.
@@ -65,30 +58,6 @@ CH1 shows the filtered signal and CH2 the raw signal (on different voltage scale
 ![Oscilloscope: filtered vs raw signal, CH2 at 50 mV/div](images/ppg/p6-8.png)
 *Fig. 7b — CH2 at 50.0 mV/div.*
 
-### User-specific data
-
-Data from two different users shows the difference in AC amplitude. Without proper potentiometer tuning, higher amplitude can saturate the op-amp and lose useful information like peaks.
-
-![PPG data from user 1](images/ppg/p6-9.png)
-*Fig. 8a — User 1.*
-
-![PPG data from user 2](images/ppg/p6-10.png)
-*Fig. 8b — User 2.*
-
-## Heart rate estimation
-
-Heart rate was estimated two independent ways, and both give approximately 85 bpm.
-
-![Time-domain peak detection on the filtered PPG signal](images/ppg/p7-11.png)
-*Fig. 9 — Time domain: 6 peaks in 4.26 s, so HR = (60 / 4.26) × 6 ≈ 85 bpm.*
-
-![Single-sided amplitude spectrum with its peak at 1.406 Hz](images/ppg/p7-12.png)
-*Fig. 10 — Frequency domain: dominant frequency 1.40647 Hz, so HR = 1.40647 × 60 ≈ 85 bpm.*
-
-## Future scope
-
-1. Test this circuit on more users to ensure the robustness of the conditioning circuit.
-2. Miniaturize the circuit into a wearable signal conditioning circuit powered by a body-heat based energy harvester.
 
 ## References
 
