@@ -11,8 +11,8 @@ author: Karthik Maddimsetti
 
 # Where the site lives. If the repo moves to Karthik's account as
 # <username>.github.io, set url to https://<username>.github.io and baseurl to "".
-url: https://ramaraju-lemniscate.github.io
-baseurl: /karthik-portfolio
+url: https://karthikm-22.github.io
+baseurl: ""
 
 # Image shown when a link to the site is shared (LinkedIn, WhatsApp, ...).
 # A page or project can override it with its own `image:`.
