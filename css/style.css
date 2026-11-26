@@ -150,6 +150,8 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .prose ul{list-style:disc}
 .prose li::marker{color:var(--muted)}
 .prose code{font-family:var(--mono);font-size:.92em;background:#efede7;padding:1px 6px;border-radius:4px;color:var(--ink)}
+.prose pre{margin:0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 20px;overflow-x:auto;font-family:var(--mono);font-size:14px;line-height:1.5;color:var(--ink)}
+.prose pre code{background:none;padding:0;border-radius:0;font-size:inherit}
 /* Figures: an image followed by an *italic caption* in the same paragraph */
 .prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px}
 .prose p>img+em{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;font-style:normal;color:var(--muted)}
