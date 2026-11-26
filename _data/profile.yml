@@ -43,15 +43,17 @@ publications:
     title: Top 15 nationally, ICEdge 2025 R&D Forum
     note: On-edge disease classification using PPG/ECG signals
 
-# About section at the bottom of the home page (placeholder text for now)
+# About section at the bottom of the home page
 about:
   - >-
-    Placeholder paragraph. A short introduction to Karthik will go here: Hello! what
-    he studies, what kind of hardware he likes to build, and what ties his
-    projects together.
+    I am Karthik Maddimsetti. I am an Electronics and VLSI Design Engineering
+    student at Dhirubhai Ambani University (Formerly, DA-IICT), passionate about
+    designing efficient integrated circuits and hardware architectures.
   - >-
-    Placeholder paragraph. A second paragraph on how he approaches design work,
-    what he cares about beyond the simulation, and what he wants to work on next.
+    My interests span digital IC design, VLSI implementation, and DSP hardware,
+    with a growing focus on biomedical signal acquisition and processing. Through
+    academic projects and research experience, I enjoy exploring the intersection
+    of circuit design, signal processing, and real-world applications.
 
 # Skills table next to the About text (placeholder rows for now)
 skills:
