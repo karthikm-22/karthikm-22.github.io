@@ -36,7 +36,7 @@ research:
     than downstream implementation details.
 
 publications:
-  - label: Under review · CMES-2027, IIT Guwahati
+  - label: Accepted · CMES-2027, IIT Guwahati
     title: A framework for LVET and CO estimation using custom hardware
     note: Lead author
   - label: 2025 · IISc Bangalore
@@ -46,7 +46,7 @@ publications:
 # About section at the bottom of the home page (placeholder text for now)
 about:
   - >-
-    Placeholder paragraph. A short introduction to Karthik will go here: what
+    Placeholder paragraph. A short introduction to Karthik will go here: Hello! what
     he studies, what kind of hardware he likes to build, and what ties his
     projects together.
   - >-
