@@ -55,16 +55,12 @@ about:
     academic projects and research experience, I enjoy exploring the intersection
     of circuit design, signal processing, and real-world applications.
 
-# Skills table next to the About text (placeholder rows for now)
+# Skills table next to the About text
 skills:
-  - label: ASIC & Layout
-    value: Cadence Virtuoso, Physical Design
-  - label: FPGA & RTL
-    value: Verilog, Xilinx Nexys7
-  - label: Analog & Lab
-    value: Filter Design, Oscilloscope
-  - label: Embedded
-    value: ESP32, UART
-  - label: Code & Tools
-    value: MATLAB, Python
+  - label: HDL and Programming
+    value: Verilog, C, C++, MATLAB
+  - label: EDA and Design Tools
+    value: Cadence Virtuoso, Xilinx Vivado, EasyEDA, Simulink
+  - label: Hardware Platforms
+    value: Xilinx Artix-7 (Nexys A7), ESP32
 
