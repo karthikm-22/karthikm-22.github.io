@@ -6,7 +6,6 @@ summary: Sobel algorithm in Verilog with a complete PC-FPGA-PC pipeline over UAR
 meta: 2.015 ms per 256 × 256 image
 image: ""
 mark: FPGA
----
 
 # ── Detail page (only used because this file has text below the ---) ──
 heading: Configurable 3×3 Convolution Engine for FPGA-Based Image Processing
@@ -29,11 +28,12 @@ The implementation processes an input image entirely through a MATLAB–FPGA-MAT
 
 ### Input
 
-(images/sobel/inputs.png)
+![Input Images](images/sobel/inputs.png)
 
 ### Input
 
-(images/sobel/outputs.png)
+[!Output Images](images/sobel/outputs.png)
 
 ### Demonstration Video
+
 
