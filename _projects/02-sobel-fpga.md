@@ -29,16 +29,16 @@ The hardware output was checked against a golden MATLAB reference model, and the
 Sobel finds edges by convolving the image A with two 3×3 kernels. One measures the horizontal gradient, the other the vertical gradient. Where the intensity changes sharply, the gradient is large and an edge is marked.
 
 ```
-       ┌ −1   0  +1 ┐
-  Gx = │ −2   0  +2 │ * A
-       └ −1   0  +1 ┘
+       [ −1   0  +1 ]
+  Gx = [ −2   0  +2 ] * A
+       [ −1   0  +1 ]
 
-       ┌ −1  −2  −1 ┐
-  Gy = │  0   0   0 │ * A
-       └ +1  +2  +1 ┘
+       [ −1  −2  −1 ]
+  Gy = [  0   0   0 ] * A
+       [ +1  +2  +1 ]
 ```
 
-With H = |Gx| and V = |Gy|, the true edge strength is E = √(H² + V²). On the FPGA this is approximated as `E ≈ H + V`, because an addition costs far less logic than squaring (a multiplication) and a square root.
+Taking H and V as the absolute values of Gx and Gy, the true edge strength is E = √(H² + V²). On the FPGA this is approximated as `E ≈ H + V`, because an addition costs far less logic than squaring (a multiplication) and a square root.
 
 Each 8-bit output pixel is then thresholded: `I = 255` if E is above the threshold, otherwise `I = 0`. A high threshold keeps only strong edges and suppresses noise but can miss fine detail. A low threshold catches weaker edges but lets noise through. The value is chosen for each image to balance edge clarity against noise.
 
