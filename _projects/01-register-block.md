@@ -4,7 +4,7 @@ order: 1
 tag: ASIC · Digital Systems
 summary: An 8-bit processor taken from a breadboard SAP computer to fabricated silicon. I built its RAM module on breadboard, then designed the register block in Cadence Virtuoso, taped out at SCL Chandigarh.
 meta: 110 MHz · 13,110.188 µm² · AR 1.033
-image: images/8bit/register-block-layout.jpg
+image: images/8bit/breadboard-to-tapeout.jpg
 mark: ASIC
 
 # ── Detail page ──
