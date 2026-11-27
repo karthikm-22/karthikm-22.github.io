@@ -42,7 +42,7 @@ publications:
     note: Lead author
   - label: 2025 · IISc Bangalore
     title: Top 15 nationally, ICEdge 2025 R&D Forum
-    note: On-edge disease classification using PPG/ECG signals
+    note: Cuffless blood pressure estimation and cardiac disease classification
 
 # About section at the bottom of the home page
 about:

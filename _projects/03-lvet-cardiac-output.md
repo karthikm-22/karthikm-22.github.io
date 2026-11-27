@@ -1,5 +1,5 @@
 ---
-title: LVET and Cardiac Output Estimation
+title: Cardiac Parameter Estimation using ECG, PPG and PCG signals
 order: 3
 tag: Research · Biomedical Hardware
 summary: Analog front ends and lightweight non-ML algorithms for LVET, SV and CO from PCG and PPG signals. Ultra-low power IC design Lab, under Prof. Biswajit Mishra.
@@ -9,7 +9,7 @@ research: true   # shown under Research instead of Projects
 mark: LVET
 
 # ── Detail page ──
-heading: A Framework for LVET and CO Estimation on a Custom-Built Front-End Hardware
+heading: Cardiac Parameter Estimation using ECG, PPG and PCG signals
 eyebrow: Research · Ongoing · ULP-IC Lab, DAU · Prof. Biswajit Mishra
 intro: Custom analog front-end hardware and computationally light algorithms that estimate left-ventricular ejection time (LVET), stroke volume (SV) and cardiac output (CO) from synchronized heart-sound (PCG) and PPG signals. First-author paper accepted at CMES 2027, IIT Guwahati.
 cover: images/lvet/acquisition-system.jpg
