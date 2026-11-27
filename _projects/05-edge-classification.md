@@ -1,15 +1,15 @@
 ---
-title: On-edge Disease Classification
+title: Cuffless Blood Pressure Estimation and Cardiac Disease Classification
 order: 5
 tag: Research · Edge Hardware
 summary: Hardware for PPG/ECG acquisition and wireless transmission to a mobile application.
 meta: Top 15 nationally, ICEdge 2025
-image: images/lvet/acquisition-system.jpg
+image: images/edge/card.png
 research: true   # shown under Research instead of Projects
 mark: Edge
 
 # ── Detail page ──
-heading: Cardiac Disease Classification and Cuffless Blood Pressure Monitoring
+heading: Cuffless Blood Pressure Estimation and Cardiac Disease Classification
 eyebrow: Research · Edge Hardware · ICEdge 2025, IISc Bengaluru
 intro: A cardiovascular health-monitoring system that acquires PPG and ECG signals on custom hardware and sends them wirelessly to a mobile application, for cardiac disease classification and cuffless blood-pressure monitoring.
 cover: images/lvet/acquisition-system.jpg

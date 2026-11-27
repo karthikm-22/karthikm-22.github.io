@@ -24,7 +24,7 @@ layout: default
   </header>
 
   {%- if page.cover and page.cover != "" %}
-  <figure>
+  <figure class="cover">
     <div class="frame"><img src="{{ page.cover | relative_url }}" alt="{{ page.title }}"></div>
     {%- if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
   </figure>
@@ -44,6 +44,35 @@ layout: default
   </footer>
 </main>
 <script>
+  // Puts each figure beside the paragraph that introduces it; extra figures in a row stack beside the same text.
+  (function () {
+    var prose = document.querySelector('.prose');
+    if (!prose) return;
+    var isFig = function (el) { return el && el.tagName === 'P' && el.firstElementChild && el.firstElementChild.tagName === 'IMG'; };
+    Array.prototype.slice.call(prose.children).forEach(function (el) {
+      if (!isFig(el) || el.parentNode !== prose) return;
+      var text = el.previousElementSibling;
+      if (!text || text.tagName !== 'P' || isFig(text)) return;
+      var row = document.createElement('div'); row.className = 'fig-row';
+      var figs = document.createElement('div'); figs.className = 'figs';
+      prose.insertBefore(row, text);
+      row.appendChild(text);
+      row.appendChild(figs);
+      var f = el;
+      while (isFig(f)) { var next = f.nextElementSibling; figs.appendChild(f); f = next; }
+      if (figs.children.length > 1) row.classList.add('multi');
+    });
+    // Click any figure to see it full size.
+    prose.addEventListener('click', function (e) {
+      if (e.target.tagName !== 'IMG') return;
+      var o = document.createElement('div'); o.className = 'zoom';
+      var i = document.createElement('img'); i.src = e.target.src; i.alt = e.target.alt;
+      o.appendChild(i); o.onclick = function () { o.remove(); };
+      document.body.appendChild(o);
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var z = document.querySelector('.zoom'); if (z) z.remove(); } });
+  })();
+
   // Builds the section menu from the page's ## headings.
   (function () {
     var toc = document.getElementById('toc');
