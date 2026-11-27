@@ -4,7 +4,7 @@ order: 3
 tag: FPGA · Time Measurement
 summary: An all-digital Vernier time-to-digital converter on FPGA with a coarse–fine counting architecture and jitter-based statistical calibration. Ongoing project.
 meta: 480 ps theoretical resolution · Ongoing
-image: images/tdc/architecture.png
+image: images/tdc/card.png
 mark: TDC
 
 # ── Detail page ──
