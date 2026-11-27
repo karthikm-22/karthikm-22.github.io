@@ -6,6 +6,7 @@ summary: A transmission-mode IR sensor and a two-stage band-pass filter that rem
 meta: 0.5–3.4 Hz pass band · gain 48 · HR ≈ 85 bpm
 image: images/ppg/p5-6.jpg
 mark: PPG
+published: false   # hidden for now. Delete this line to show the project again.
 
 # ── Detail page (only used because this file has text below the ---) ──
 heading: Photoplethysmography Signal Acquisition and Conditioning

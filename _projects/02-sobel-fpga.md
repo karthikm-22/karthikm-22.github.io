@@ -68,10 +68,10 @@ Pixels move between the two halves of the design over an 8-bit bus, one pixel at
 
 Two test images were processed end to end: the standard Lena test image and a photograph of three penguins.
 
-![Input images in MATLAB before transmission](images/sobel/inputs.png)
+![Input images in MATLAB before transmission](images/sobel/inputs.png){: .wide}
 *Fig. 2 — Input images, converted to grayscale in MATLAB.*
 
-![Edge maps rebuilt in MATLAB from the FPGA's output hex file](images/sobel/outputs.png)
+![Edge maps rebuilt in MATLAB from the FPGA's output hex file](images/sobel/outputs.png){: .wide}
 *Fig. 3 — Edge maps computed on the FPGA and rebuilt in MATLAB from the output hex file.*
 
 ## Demonstration

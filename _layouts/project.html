@@ -44,22 +44,35 @@ layout: default
   </footer>
 </main>
 <script>
-  // Puts each figure beside the paragraph that introduces it; extra figures in a row stack beside the same text.
+  // Puts each figure beside the paragraph(s) that introduce it. In the Markdown, add {: .wide} after an image to show
+  // it larger below its text, or {: .big} to keep it beside the text but larger.
   (function () {
     var prose = document.querySelector('.prose');
     if (!prose) return;
-    var isFig = function (el) { return el && el.tagName === 'P' && el.firstElementChild && el.firstElementChild.tagName === 'IMG'; };
+    var isFig = function (el) { return !!el && el.tagName === 'P' && !!el.firstElementChild && el.firstElementChild.tagName === 'IMG'; };
+    var has = function (el, c) { return el.firstElementChild.classList.contains(c); };
     Array.prototype.slice.call(prose.children).forEach(function (el) {
       if (!isFig(el) || el.parentNode !== prose) return;
-      var text = el.previousElementSibling;
-      if (!text || text.tagName !== 'P' || isFig(text)) return;
+      if (has(el, 'wide')) { el.classList.add('fig-wide'); return; }
+      var texts = [], len = 0, t = el.previousElementSibling;
+      while (t && t.tagName === 'P' && !isFig(t)) {
+        var n = t.textContent.length;
+        if (texts.length && len + n > 800) break;
+        texts.unshift(t); len += n; t = t.previousElementSibling;
+      }
+      if (!texts.length) { el.classList.add('fig-solo'); return; }
       var row = document.createElement('div'); row.className = 'fig-row';
+      var txt = document.createElement('div'); txt.className = 'txt';
       var figs = document.createElement('div'); figs.className = 'figs';
-      prose.insertBefore(row, text);
-      row.appendChild(text);
-      row.appendChild(figs);
+      prose.insertBefore(row, texts[0]);
+      texts.forEach(function (p) { txt.appendChild(p); });
+      row.appendChild(txt); row.appendChild(figs);
       var f = el;
-      while (isFig(f)) { var next = f.nextElementSibling; figs.appendChild(f); f = next; }
+      while (isFig(f) && !has(f, 'wide')) {
+        var next = f.nextElementSibling;
+        if (has(f, 'big')) row.classList.add('big');
+        figs.appendChild(f); f = next;
+      }
       if (figs.children.length > 1) row.classList.add('multi');
     });
     // Click any figure to see it full size.

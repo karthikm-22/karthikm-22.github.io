@@ -160,14 +160,21 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 /* Figures: an image followed by an *italic caption* in the same paragraph */
 .prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px;cursor:zoom-in}
 /* text on one side, its figure(s) on the other (built by the script in the project layout) */
-.fig-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center}
-.fig-row.multi{align-items:start}
-.fig-row.multi>p{position:sticky;top:84px}
-.fig-row>p{margin:0}
+.fig-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
+.fig-row.big{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
+.fig-row .txt{display:flex;flex-direction:column;gap:18px}
+.fig-row .txt p{margin:0}
+.fig-row.multi .txt{position:sticky;top:84px}
 .fig-row .figs{display:flex;flex-direction:column;gap:18px;min-width:0}
 .fig-row .figs>p{margin:0}
-.fig-row img,.prose p>img:only-of-type{max-height:300px;width:auto;max-width:100%}
+.fig-row img,.prose p.fig-solo>img{max-height:300px;width:auto;max-width:100%}
+.fig-row.big img{max-height:520px}
 .fig-row .figs>p:nth-child(n+2) img{max-height:240px}
+/* figures that sit below their text at a larger size: add {: .wide} after the image in the Markdown */
+.prose p.fig-wide{max-width:780px;margin-left:auto;margin-right:auto}
+.prose p.fig-wide>img{max-height:720px;width:auto;max-width:100%}
+.prose p.fig-wide>img+em{text-align:center}
+.eq{font-family:var(--mono);font-size:.9em;background:#efede7;padding:1px 6px;border-radius:4px;color:var(--ink);white-space:nowrap}
 .cover{max-width:760px;margin:0 auto}
 .cover .frame img{max-height:380px;width:auto;max-width:100%;margin:0 auto;padding:10px}
 .zoom{position:fixed;inset:0;z-index:50;background:rgba(20,20,18,.86);display:flex;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
@@ -224,9 +231,10 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
   .article h2{font-size:26px}
   .prose p,.prose li{font-size:16px;line-height:1.65}
   .prose img{padding:6px}
-  .fig-row{grid-template-columns:1fr;gap:14px}
-  .fig-row.multi>p{position:static}
-  .fig-row img,.prose p>img:only-of-type{max-height:260px}
+  .fig-row,.fig-row.big{grid-template-columns:1fr;gap:14px}
+  .fig-row.multi .txt{position:static}
+  .eq{white-space:normal}
+  .fig-row img,.fig-row.big img,.prose p.fig-solo>img{max-height:300px}
   .cover .frame img{max-height:240px}
   .p-foot{padding:32px 0 40px;margin-top:32px}
   .sitefoot{padding:24px 0 32px}

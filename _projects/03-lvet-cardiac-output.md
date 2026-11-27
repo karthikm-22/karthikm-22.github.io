@@ -21,19 +21,19 @@ report: ""
 
 A custom analog front end was designed for PCG signal conditioning and acquisition. It captures the S1 and S2 heart sounds, which mark the closing of the heart valves and so bound the ejection phase of each beat.
 
-![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png)
-*Fig. 2 — Layout of the custom PCG conditioning board (79.5 × 49.3 mm), top and bottom layers.*
-
 ![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg)
-*Fig. 3 — The assembled PCG hardware: stethoscope pickup, conditioning board and ESP32.*
+*Fig. 2 — The assembled PCG hardware: stethoscope pickup, conditioning board and ESP32.*
+
+![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .wide}
+*Fig. 3 — Layout of the custom PCG conditioning board (79.5 × 49.3 mm), top and bottom layers.*
 
 A matching custom board conditions the PPG signal.
 
-![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png)
-*Fig. 4 — Layout of the custom PPG conditioning board, top and bottom layers.*
-
 ![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg)
-*Fig. 5 — The assembled PPG conditioning board.*
+*Fig. 4 — The assembled PPG conditioning board.*
+
+![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .wide}
+*Fig. 5 — Layout of the custom PPG conditioning board, top and bottom layers.*
 
 ## Algorithms
 
@@ -45,7 +45,7 @@ The same work developed computationally efficient algorithms for multimodal card
 
 The heart-sound segmentation algorithm was validated on 2,192 recordings from PhysioNet. Against the reference annotations it achieved an LVET mean error of 1.55 ms and an 87.2% match rate for S1–S2 detection.
 
-![Adaptive S1–S2 detection compared with database annotations](images/lvet/s1-s2-detection.png)
+![Adaptive S1–S2 detection compared with database annotations](images/lvet/s1-s2-detection.png){: .wide}
 *Fig. 6 — The adaptive algorithm on a PhysioNet recording: raw PCG, detected S1 and S2, the ground-truth annotations, and the smoothed Hilbert envelope with its learning and classification windows.*
 
 | Metric | Result |
