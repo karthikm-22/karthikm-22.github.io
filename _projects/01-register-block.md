@@ -32,12 +32,12 @@ The RAM was designed and tested using logic gates and flip-flops for data storag
 
 For the fabricated chip, the work covered the register blocks of the processor, including the architectural and implementation decisions for how they interface with the ALU and the system bus. Every choice was driven by two goals: the smallest possible area and the highest possible operating frequency.
 
-![Layout of the 8-bit register block in Cadence Virtuoso](images/8bit/register-block-layout.jpg)
+![Layout of the 8-bit register block in Cadence Virtuoso](images/8bit/register-block-layout.jpg){: .big}
 *Fig. 4 — Full layout of the 8-bit register block in Cadence Virtuoso, with its eight bus lines, the ALU outputs and the OE, IE and CLK control signals.*
 
 Each bit is a D-register, and tristate buffers connect the register to the shared bus only when its output is enabled.
 
-![Close-up of the register block layout](images/8bit/register-block-detail.jpg)
+![Close-up of the register block layout](images/8bit/register-block-detail.jpg){: .big}
 *Fig. 5 — Close-up of the layout, marking the tristate buffers and a 1-bit D-register.*
 
 ## Layout optimisation

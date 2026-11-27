@@ -22,7 +22,7 @@ The adder is a 12-bit Brent–Kung design, a parallel-prefix structure that comp
 
 Built-in self-test (BIST) lets the circuit check itself without external test equipment. BILBO registers generate pseudo-random test patterns that drive the adder, and a multiple-input signature register (MISR) compresses the outputs into a single signature. Comparing that signature with the fault-free one shows whether the adder is working.
 
-![BIST architecture around the Brent–Kung adder](images/bk/bist-architecture.png)
+![BIST architecture around the Brent–Kung adder](images/bk/bist-architecture.png){: .wide}
 *Fig. 1 — The synthesised BIST architecture: 12-bit BILBO modules around the Brent–Kung adder (the circuit under test), with 2-input LUTs that model stuck-at-0 and stuck-at-1 faults.*
 
 ## Raising fault coverage

@@ -34,5 +34,5 @@ The test input is a synthetic signal whose frequency steps up over one second, s
 ![Synthetic test signal](images/dwt/test-signal.png)
 *Fig. 3 — Synthetic test signal used as the input.*
 
-![Approximation and detail coefficients at three levels](images/dwt/dwt-output.png)
+![Approximation and detail coefficients at three levels](images/dwt/dwt-output.png){: .wide}
 *Fig. 4 — Output of the RTL design, plotted from the Vivado simulation results: approximation (cA) and detail (cD) coefficients at levels 1 to 3.*

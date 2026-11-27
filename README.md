@@ -51,7 +51,18 @@ Anything written here turns the card into a full project page.
 *Fig. 1 — The italic line right under an image becomes its caption.*
 ```
 
-`_projects/ppg-front-end.md` shows every optional page field: intro, cover image and report PDF.
+`_projects/vernier-tdc.md` shows every optional page field: intro, cover image and report PDF.
+
+**Where figures go.** By default an image sits beside the paragraph above it. To change that, add one of these right after the image:
+
+```
+![Alt text](images/x.png){: .wide}   larger, centred below its text (wide plots, tall diagrams)
+![Alt text](images/x.png){: .big}    still beside the text, but larger (detailed layouts)
+```
+
+Click any figure on a project page to see it full size.
+
+**Hiding a project.** Add `published: false` to the top of its file (between the `---` lines). It disappears from the home page and has no page. Delete that line to bring it back. `_projects/ppg-front-end.md` is hidden this way for now.
 
 ## Folder map
 
