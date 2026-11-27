@@ -74,4 +74,10 @@ Two test images were processed end to end: the standard Lena test image and a ph
 ![Edge maps rebuilt in MATLAB from the FPGA's output hex file](images/sobel/outputs.png)
 *Fig. 3 — Edge maps computed on the FPGA and rebuilt in MATLAB from the output hex file.*
 
-<!-- Demonstration video: add a "## Demonstration" section here once the video is uploaded. -->
+## Demonstration
+
+A video demonstration of the project.
+
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/CXS-B9Ilgyo" title="Demonstration of the FPGA convolution engine" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+*[Watch on YouTube](https://youtu.be/CXS-B9Ilgyo)*

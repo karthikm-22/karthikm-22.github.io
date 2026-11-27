@@ -37,26 +37,26 @@ The EN signal switches the IR LED on, which emits infrared light through the fin
 Heartbeat-driven changes in blood volume cause small periodic variations in the photocurrent. This forms the raw PPG signal.
 
 ![PPG acquisition circuit schematic](images/ppg/p3-4.png)
-*Fig. 5 — Acquisition circuit.*
+*Fig. 4 — Acquisition circuit.*
 
 ## Conditioning circuit
 
 The useful signal lies between 0.5 Hz and 8 Hz, on top of a large unwanted DC component. A two-stage band-pass active filter amplifies the AC component and attenuates the DC component and unwanted frequencies.
 
 ![Two-stage band-pass conditioning circuit](images/ppg/p4-5.png)
-*Fig. 6 — Two cascaded stages with a potentiometer between them.*
+*Fig. 5 — Two cascaded stages with a potentiometer between them.*
 
 ## Results
 
-### Raw vs. filtered signal
+### Raw vs. conditioned signal
 
-CH1 shows the filtered signal and CH2 the raw signal (on different voltage scales in each figure). The raw signal is dominated by its DC component, while the filtered signal shows the amplified pulsatile AC component.
+The raw signal (red) is dominated by its DC component, while the conditioned signal (blue) shows the amplified pulsatile AC component. The systolic peak, dicrotic notch and diastolic peak are all clearly visible in each cycle.
 
-![Oscilloscope: filtered vs raw signal, CH2 at 2 V/div](images/ppg/p6-7.png)
-*Fig. 7a — CH2 at 2.00 V/div.*
+![Oscilloscope: conditioned and raw PPG signals](images/ppg/conditioned-ppg.png)
+*Fig. 6 — Conditioned PPG signal (blue) with the systolic peak, dicrotic notch and diastolic peak marked, above the raw PPG signal (red) with its DC level.*
 
-![Oscilloscope: filtered vs raw signal, CH2 at 50 mV/div](images/ppg/p6-8.png)
-*Fig. 7b — CH2 at 50.0 mV/div.*
+![The conditioning circuit on a custom PCB](images/ppg/ppg-pcb.jpg)
+*Fig. 7 — The conditioning circuit built on a custom PCB (PPG_v1).*
 
 
 ## Continued in the ULP-IC Lab

@@ -4,7 +4,7 @@ order: 5
 tag: Research · Edge Hardware
 summary: Hardware for PPG/ECG acquisition and wireless transmission to a mobile application.
 meta: Top 15 nationally, ICEdge 2025
-image: ""
+image: images/lvet/acquisition-system.jpg
 research: true   # shown under Research instead of Projects
 mark: Edge
 
@@ -12,8 +12,8 @@ mark: Edge
 heading: Cardiac Disease Classification and Cuffless Blood Pressure Monitoring
 eyebrow: Research · Edge Hardware · ICEdge 2025, IISc Bengaluru
 intro: A cardiovascular health-monitoring system that acquires PPG and ECG signals on custom hardware and sends them wirelessly to a mobile application, for cardiac disease classification and cuffless blood-pressure monitoring.
-cover: ""
-cover_caption: ""
+cover: images/lvet/acquisition-system.jpg
+cover_caption: "Fig. 1 — Signals acquired on the custom hardware and streamed wirelessly to the mobile application."
 report: ""
 ---
 
