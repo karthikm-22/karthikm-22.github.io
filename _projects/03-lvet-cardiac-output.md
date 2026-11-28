@@ -14,6 +14,7 @@ eyebrow: Research · ULP-IC Lab, DAU · Prof. Biswajit Mishra
 intro: Custom front ends and lightweight algorithms that estimate left-ventricular ejection time (LVET), stroke volume (SV) and cardiac output (CO) from heart sounds (PCG) and PPG. First-author paper accepted at CMES 2027, IIT Guwahati (February 2027).
 cover: images/lvet/acquisition-system.jpg
 cover_caption: "Fig. 1 — The complete acquisition system: (a) raw and conditioned PCG signals with S1 and S2 marked, (b) raw and conditioned PPG signals with the systolic peak, dicrotic notch and diastolic peak, sent wirelessly to a mobile application."
+cover_plain: true   # cover strip blends into the page background instead of sitting on white
 report: ""
 ---
 
@@ -27,18 +28,18 @@ Two custom front ends, one for PCG and one for PPG, stream to a mobile applicati
 
 The PCG front end: stethoscope pickup, conditioning board and ESP32.
 
-![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .pair}
+![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .pair .plain}
 *Fig. 2 — The PCB design of the custom PCG conditioning board (79.5 × 49.3 mm), top and bottom layers.*
 
-![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg){: .pair}
+![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg){: .pair .plain}
 *Fig. 3 — The fabricated PCG hardware: stethoscope pickup, conditioning board and ESP32.*
 
 The PPG front end: a matching custom conditioning board.
 
-![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .pair}
+![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .pair .plain}
 *Fig. 4 — The PCB design of the custom PPG conditioning board, top and bottom layers.*
 
-![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg){: .pair}
+![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg){: .pair .plain}
 *Fig. 5 — The fabricated PPG conditioning board.*
 
 Three lightweight algorithms run on the signals; each choice below comes with its reason.

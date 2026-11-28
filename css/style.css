@@ -58,6 +58,8 @@ p{text-wrap:pretty}
 .projects{display:flex;flex-direction:column;gap:36px;padding:80px 0;border-top:1px solid var(--ink);scroll-margin-top:64px}
 .projects-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:56px 36px}
+/* Research has two cards: let them share the row instead of leaving a blank third column */
+.research .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .card{display:flex;flex-direction:column;gap:18px;min-width:0;color:var(--ink)}
 a.card{transition:transform .2s ease}
 a.card:hover{transform:translateY(-3px);text-decoration:none;color:var(--ink)}
@@ -159,7 +161,7 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .prose td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line);color:var(--text)}
 .prose th:last-child,.prose td:last-child{padding-right:0}
 /* Figures: an image followed by an *italic caption* in the same paragraph */
-.prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:transparent;border-radius:6px;cursor:zoom-in;mix-blend-mode:multiply}
+.prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:6px;cursor:zoom-in}
 /* text on one side, its figure(s) on the other (built by the script in the project layout) */
 .fig-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
 .fig-row.big{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
@@ -185,7 +187,9 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .eq{font-family:var(--mono);font-size:.9em;background:#efede7;padding:1px 6px;border-radius:4px;color:var(--ink);white-space:nowrap}
 .cover{max-width:760px;margin:0 auto}
 .cover .frame{background:none;border:0;border-radius:0}
-.cover .frame img{max-height:380px;width:auto;max-width:100%;margin:0 auto;mix-blend-mode:multiply}
+.cover .frame img{max-height:380px;width:auto;max-width:100%;margin:0 auto;background:#fff;cursor:zoom-in}
+/* photos and covers that blend into the page background instead of sitting on a white card */
+.prose img.plain,.cover.plain .frame img{background:transparent;border:0;mix-blend-mode:multiply}
 /* cover_wide: true in the front matter shows a long strip of images at the full width of the page */
 .cover.wide{max-width:none}
 .cover.wide .frame img{max-height:none;width:100%}
