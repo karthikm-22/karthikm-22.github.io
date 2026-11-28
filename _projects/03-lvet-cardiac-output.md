@@ -21,7 +21,7 @@ report: ""
 
 Stroke volume and cardiac output show how well the heart pumps, but measuring them usually takes echocardiography or invasive catheters. Heart sounds and PPG can be recorded at the surface, and the time between S1 and S2 (left-ventricular ejection time, LVET) reflects each beat's ejection. I wanted estimates light enough for a wearable, without intensive machine-learning models.
 
-## What I built and why
+## Design and rationale
 
 Two custom front ends, one for PCG and one for PPG, stream to a mobile application.
 

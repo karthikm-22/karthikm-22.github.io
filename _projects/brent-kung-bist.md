@@ -20,7 +20,7 @@ report: ""
 
 Built-in self-test lets a circuit test itself without external equipment, using a pattern generator and a signature register. The catch is that a short pseudo-random generator feeds correlated patterns to the circuit and leaves faults untested. Here the adder has 25 inputs but the generator is only 13 bits wide.
 
-## What I built and why
+## Design and rationale
 
 A 12-bit Brent–Kung adder (a parallel-prefix design that finds carries in a logarithmic number of stages with modest wiring), surrounded by 13-bit BILBO registers that generate test patterns and a MISR that compresses the outputs into a signature. Single stuck-at faults are injected through LUTs and the signature is compared automatically. All runs are in simulation, over 710 faults.
 

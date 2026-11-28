@@ -20,7 +20,7 @@ report: ""
 
 The discrete wavelet transform (DWT) splits a signal into frequency bands, and each level filters and then discards every second output. In direct form that wastes half of the arithmetic. I wanted an architecture that computes only the outputs that are kept, as a stream, and I wanted to understand how many bits the coefficients need.
 
-## What I built and why
+## Design and rationale
 
 A three-level forward DWT in Verilog (polyphase filter banks, a pipelined Q1.7 datapath, BRAM storage with approximation and detail coefficients in separate memories, valid handshakes between levels, 8 kHz input rate), a MATLAB reference model with Vivado simulation on synthetic multi-tone signals (50, 100, 150 and 1000 Hz), and a coefficient-quantization study for db1, db2, db4 and db8 in Q1.7 and Q1.15.
 

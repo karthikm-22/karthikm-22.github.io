@@ -20,7 +20,7 @@ report: ""
 
 The task was a 15-tap low-pass FIR (−6 dB at 1 kHz, at least 20 dB attenuation by 1.1 kHz, 8-bit samples and coefficients) built from arithmetic blocks I had designed earlier. I wanted to know how much hardware the specification really needs, and what 8-bit arithmetic does to the filter.
 
-## What I built and why
+## Design and rationale
 
 A 15-tap FIR in Verilog: a 14-stage delay line, four 8-bit pre-adders, five 8 × 8 array multipliers (modified for unsigned × signed), and a six-operand carry-save adder tree with a final ripple-carry adder. Samples and coefficients are Q1.7, and the sampling frequency is 4 kHz.
 

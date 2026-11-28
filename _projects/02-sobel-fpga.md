@@ -21,7 +21,7 @@ report: ""
 
 Edge detection is a window operation: every output pixel needs its eight neighbours. In software it runs pixel by pixel, while hardware can stream the image through line buffers and compute continuously. I wanted to see the whole path working, from image on a PC to edge map on the FPGA and back, not only in simulation.
 
-## What I built and why
+## Design and rationale
 
 A streaming 3×3 convolution engine in Verilog (BRAM image storage, three line buffers, a sliding window, coefficients held in a configurable window; Sobel is the configuration shown), a MATLAB–UART–FPGA framework that sends the image and rebuilds the edge map, and a check against a golden MATLAB model: the edge maps match.
 

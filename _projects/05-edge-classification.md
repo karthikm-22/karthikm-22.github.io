@@ -21,7 +21,7 @@ report: ""
 
 Hypertension is called a silent killer, and measuring blood pressure or ECG normally needs a cuff, a needle or a trained professional, which is hard in resource-constrained regions. A wearable that records ECG and PPG without a cuff could close that gap.
 
-## What I built and why
+## Design and rationale
 
 A 2-lead ECG (limb electrodes only) and a finger-mounted PPG sensor stream over Wi-Fi to an Android phone, which classifies cardiac anomalies and computes systolic and diastolic pressure from pulse transit time. My part was the PPG acquisition hardware; the other points describe the system around it.
 

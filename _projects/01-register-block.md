@@ -21,7 +21,7 @@ report: ""
 
 This project takes a Simple-As-Possible (SAP) 8-bit computer from breadboards to a fabricated chip. The register blocks sit between the ALU and the shared system bus, so I designed them for the two things that matter on a chip: the smallest area and the highest operating frequency.
 
-## What I built and why
+## Design and rationale
 
 Two stages. On the breadboard, a 16 × 8 RAM built from gates and flip-flops, addressed by the Memory Address Register and sharing the bus with the rest of the SAP computer; I helped integrate and debug the complete computer.
 

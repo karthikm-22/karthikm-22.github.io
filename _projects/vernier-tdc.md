@@ -20,7 +20,7 @@ report: ""
 
 A time-to-digital converter (TDC) turns the time between a START and a STOP event into a number. A Vernier TDC gets a resolution finer than its clock period by letting two clocks of slightly different periods chase each other. The question I worked on: with real, jittery FPGA clocks, how far can the ideal resolution be trusted, and can measurement correct for the difference?
 
-## What I built and why
+## Design and rationale
 
 Two ring-oscillator clocks from cascaded CARRY4 primitives, one slow (25.24 ns) and one fast (24.76 ns); a D flip-flop edge detector with coarse and fine counters controlled by START and STOP; a calibration that replaces the ideal 0.48 ns step with a measured one; and a Nexys A7 test setup with the clocks probed on an oscilloscope.
 
