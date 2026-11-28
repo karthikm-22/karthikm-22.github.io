@@ -4,7 +4,7 @@ order: 3
 tag: Research · Biomedical Hardware
 summary: Analog front ends and lightweight non-ML algorithms for LVET, SV and CO from PCG and PPG signals. Ultra-low power IC design Lab, under Prof. Biswajit Mishra.
 meta: First author · Accepted, CMES 2027
-image: images/lvet/pcg-hardware.jpg
+image: images/lvet/acquisition-system.jpg
 research: true   # shown under Research instead of Projects
 mark: LVET
 
