@@ -14,6 +14,7 @@ eyebrow: Research · ULP-IC Lab, DAU · Prof. Biswajit Mishra
 intro: Custom front ends and lightweight algorithms that estimate left-ventricular ejection time (LVET), stroke volume (SV) and cardiac output (CO) from heart sounds (PCG) and PPG. First-author paper accepted at CMES 2027, IIT Guwahati (February 2027).
 cover: images/lvet/acquisition-system.jpg
 cover_caption: "Fig. 1 — The complete acquisition system: (a) raw and conditioned PCG signals with S1 and S2 marked, (b) raw and conditioned PPG signals with the systolic peak, dicrotic notch and diastolic peak, sent wirelessly to a mobile application."
+plain_figs: true   # blend figures into the page background (no white card)
 report: ""
 ---
 

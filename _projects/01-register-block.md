@@ -14,6 +14,7 @@ intro: An 8-bit Simple-As-Possible (SAP) processor, first built and debugged on 
 cover: images/8bit/breadboard-to-tapeout.jpg
 cover_wide: true
 cover_caption: "Fig. 1 — From breadboard to silicon: the breadboard SAP computer, its PCB, the chip layout, the fabricated die and the packaged chip on its test board."
+plain_figs: true   # blend figures into the page background (no white card)
 report: ""
 ---
 
