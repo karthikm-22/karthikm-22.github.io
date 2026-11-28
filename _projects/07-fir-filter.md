@@ -33,7 +33,7 @@ The six-operand carry-save tree sums the products, and the XOR rows in front of 
 *Fig. 2 — The six-operand CSA tree (top) and the XOR logic that conditionally inverts each operand (bottom).*
 
 - **Skip the zeros, then use symmetry.** The coefficients are half-band: every other tap is zero and the centre tap is 0.5. So only 9 taps are non-zero, and symmetric pairs share a coefficient and can be added before multiplying. Fifteen multipliers become five. (Direct form: 15 multipliers and 14 adders.)
-- **Area over speed.** A new sample arrives every 250 µs, far longer than the combinational delay (in ns order), so extra speed would only wait for the next sample. I used ripple-carry pre-adders and array multipliers and minimised hardware instead. During the left over time, the circuit could be power-gated.
+- **Area over speed.** A new sample arrives every 250 µs, far longer than the combinational delay (in ns order), so extra speed would only wait for the next sample. I used ripple-carry pre-adders and array multipliers and minimised hardware instead. In the leftover time, the circuit could be power-gated.
 - **Q1.7 format.** All coefficients lie in [−1, 0.992), 8 bits are available, and the earlier blocks work in two's complement.
 - **Signed values with XOR rows and an LSB bias.** The multiplier works on the coefficient's magnitude, and XOR gates driven by each coefficient's sign turn the carry-save tree into an adder-subtractor. The LSB bias supplies the +1 of two's complement.
 - **Truncation points.** Pre-adder sums, products (bits 14 to 7) and the accumulator are each cut back to 8 bits.

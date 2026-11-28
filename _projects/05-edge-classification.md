@@ -28,7 +28,7 @@ A 2-lead ECG (limb electrodes only) and a finger-mounted PPG sensor stream over 
 ![System overview: ECG and PPG acquisition, Wi-Fi link, phone-side processing](images/edge/card.png){: .wide}
 *Fig. 1 — System overview: the PPG and 2-lead ECG acquisition chains stream over Wi-Fi from ESP32 nodes to the phone, which synchronises the signals, classifies cardiac disease and computes systolic and diastolic pressure.*
 
-- **PPG band-pass of 0.5–8 Hz in two active stages (my part).** I kept the upper corner at 8 Hz because of the dicrotic notch, a feature of interest. A potentiometer between the two stages sets the gain for each subject, because pulse amplitude varies from person to person and could otherwise saturate the signal.
+- **PPG band-pass of 0.5–8 Hz in two active stages (my contribution).** I kept the upper corner at 8 Hz because of the dicrotic notch, a feature of interest. A potentiometer between the two stages sets the gain for each subject, because pulse amplitude varies from person to person and could otherwise saturate the signal.
 - **Sub-millisecond synchronisation of ECG and PPG.** Pulse transit time is the delay between the ECG R-peak and the PPG pulse, so the two signals need a shared time base. A synchronisation algorithm over the Wi-Fi link aligns them to better than ±1 ms.
 - **Limb electrodes only.** No chest placement and no trained assistance, which suits resource-constrained settings.
 - **Processing on the phone.** The wearable only acquires and streams. Classification and blood-pressure computation run on the phone's processor.

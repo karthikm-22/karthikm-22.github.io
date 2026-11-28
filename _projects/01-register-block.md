@@ -41,7 +41,7 @@ On the chip, the 8-bit register block in Cadence Virtuoso, 180 nm CMOS: each bit
 
 - **Tristate buffers on the bus.** Several blocks on the chip share the bus, and two cannot drive it at the same time. A register therefore drives the bus only while its output-enable is on.
 - **Placement chosen by comparison.** I explored several placement configurations and compared area, aspect ratio and frequency. Each had to avoid routing congestion and pass the design-rule check. The final layout is close to square.
-- Tristate logic was new to me, and a tristate problem was the main bug I debugged on the breadboard RAM.
+- **Tristate bug on the breadboard.** A tristate problem was the main bug I debugged on the breadboard RAM.
 
 ## Results
 
