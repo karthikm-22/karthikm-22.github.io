@@ -113,7 +113,6 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .frame{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .frame.pad{padding:20px} .frame.pad-s{padding:14px}
 .frame img{width:100%;display:block}
-.toc{display:flex;flex-wrap:wrap;gap:10px 24px;padding:28px 0 8px;font-size:14px}
 .article{max-width:860px;margin:0 auto;padding-bottom:40px}
 .article>section{display:flex;flex-direction:column;gap:18px;padding-top:72px;scroll-margin-top:64px}
 .article>section:first-child{padding-top:56px}
@@ -236,7 +235,6 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
   .p-head{gap:16px;padding:36px 0 28px}
   .p-head h1{font-size:31px;line-height:1.1}
   .p-head p{font-size:16.5px}
-  .toc{gap:8px 18px;padding:22px 0 4px;font-size:13.5px}
   .prose>h2{padding-top:52px}
   .prose>h2:first-child{padding-top:36px}
   .article h2{font-size:26px}
