@@ -35,8 +35,6 @@ layout: default
   </figure>
   {%- endif %}
 
-  <nav class="toc" id="toc" aria-label="Sections"></nav>
-
   <article class="article prose">
     {{ content }}
   </article>
@@ -97,18 +95,6 @@ layout: default
       document.body.appendChild(o);
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var z = document.querySelector('.zoom'); if (z) z.remove(); } });
-  })();
-
-  // Builds the section menu from the page's ## headings.
-  (function () {
-    var toc = document.getElementById('toc');
-    document.querySelectorAll('.prose h2[id]').forEach(function (h) {
-      if (/^references$/i.test(h.textContent.trim())) return;
-      var a = document.createElement('a');
-      a.href = '#' + h.id; a.textContent = h.textContent;
-      toc.appendChild(a);
-    });
-    if (!toc.children.length) toc.remove();
   })();
 </script>
 {%- endif -%}
