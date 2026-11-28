@@ -4,21 +4,25 @@ order: 2
 tag: FPGA · Image Processing
 summary: Sobel algorithm in Verilog with a complete PC-FPGA-PC pipeline over UART on a Xilinx Nexys7.
 meta: 2.015 ms per 256 × 256 image
-image: images/sobel/outputs.png
+image: images/sobel/card.jpg
 mark: FPGA
 
 # ── Detail page (only used because this file has text below the ---) ──
 heading: Configurable 3×3 Convolution Engine for FPGA-Based Image Processing
 eyebrow: FPGA · Image Processing · Digital Systems
 intro: A 3×3 convolution engine for grayscale images on a Nexys A7 FPGA, configured here as a Sobel edge detector. Images travel from MATLAB to the FPGA and back over UART, so the whole pipeline is verified end to end in hardware. EL467 Digital Programming course project, with Udita Chatwani.
-cover: images/sobel/system-block.png
-cover_caption: "Fig. 1 — System-level block diagram: MATLAB sends the image over UART into BRAM, the FPGA computes the edge map, and UART returns it to MATLAB."
+video: CXS-B9Ilgyo   # YouTube video ID, shown at the top of the page
+cover: ""
+cover_caption: ""
 report: ""
 ---
 
 ## Overview
 
 The image goes through a complete MATLAB → FPGA → MATLAB flow. MATLAB pre-processes the image and sends it to the FPGA over UART. The FPGA computes the edge map in hardware and streams the processed pixels back over UART, where MATLAB rebuilds and displays the final edge-detected image.
+
+![System-level block diagram of the pipeline](images/sobel/system-block.png){: .wide}
+*Fig. 1 — System-level block diagram: MATLAB sends the image over UART into BRAM, the FPGA computes the edge map, and UART returns it to MATLAB.*
 
 The architecture uses BRAM buffering, three line buffers and a 3×3 sliding window, so pixels are processed as a stream. The gradient computation reads its coefficients from a configurable 3×3 window: changing the kernel coefficients adapts the same hardware to other window-based image-processing and detection algorithms.
 
@@ -73,11 +77,3 @@ Two test images were processed end to end: the standard Lena test image and a ph
 
 ![Edge maps rebuilt in MATLAB from the FPGA's output hex file](images/sobel/outputs.png){: .wide}
 *Fig. 3 — Edge maps computed on the FPGA and rebuilt in MATLAB from the output hex file.*
-
-## Demonstration
-
-A video demonstration of the project.
-
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/CXS-B9Ilgyo" title="Demonstration of the FPGA convolution engine" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
-
-*[Watch on YouTube](https://youtu.be/CXS-B9Ilgyo)*
