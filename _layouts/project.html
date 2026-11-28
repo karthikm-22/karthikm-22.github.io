@@ -29,7 +29,7 @@ layout: default
     <figcaption><a href="https://youtu.be/{{ page.video }}" target="_blank" rel="noopener">Watch the demonstration on YouTube ↗</a></figcaption>
   </figure>
   {%- elsif page.cover and page.cover != "" %}
-  <figure class="cover">
+  <figure class="cover{% if page.cover_wide %} wide{% endif %}">
     <div class="frame"><img src="{{ page.cover | relative_url }}" alt="{{ page.title }}"></div>
     {%- if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
   </figure>

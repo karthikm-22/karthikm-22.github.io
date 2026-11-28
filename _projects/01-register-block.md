@@ -4,7 +4,7 @@ order: 1
 tag: ASIC · Digital Systems
 summary: An 8-bit processor taken from a breadboard SAP computer to fabricated silicon.
 meta: 110 MHz · 13,110 µm² (register block)
-image: images/8bit/breadboard-to-tapeout.jpg
+image: images/8bit/card.jpg
 mark: ASIC
 
 # ── Detail page ──
@@ -12,6 +12,7 @@ heading: "8-bit Processor: From Breadboards to Tape-out"
 eyebrow: ASIC · Digital systems · 180 nm CMOS, fabricated at SCL Chandigarh
 intro: An 8-bit Simple-As-Possible (SAP) processor, first built and debugged on breadboards and then redesigned full-custom in a 180 nm CMOS process and fabricated at SCL, Chandigarh. My contributions were the RAM module at the breadboard stage and the register block on the chip.
 cover: images/8bit/breadboard-to-tapeout.jpg
+cover_wide: true
 cover_caption: "Fig. 1 — From breadboard to silicon: the breadboard SAP computer, its PCB, the chip layout, the fabricated die and the packaged chip on its test board."
 report: ""
 ---
