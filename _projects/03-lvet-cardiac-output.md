@@ -65,3 +65,7 @@ The reference is the dataset's own S1 and S2 annotation.
 
 - Stroke volume and cardiac output estimates are not yet validated against a reference.
 - Next: validate stroke volume and cardiac output, and the uncalibrated beat-to-beat extension from the internship.
+
+## Publication
+
+"A Framework for LVET and CO Estimation on a Custom-Built Front-End Hardware", first author. Formally accepted for presentation at the IEEE Conference on Medical Engineering and Sciences 2027 (CMES 2027), IIT Guwahati, February 2027.

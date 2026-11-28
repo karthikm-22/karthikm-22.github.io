@@ -28,6 +28,18 @@ A streaming 3×3 convolution engine in Verilog (BRAM image storage, three line b
 ![System-level block diagram of the pipeline](images/sobel/system-block.png){: .wide}
 *Fig. 1 — System-level block diagram: MATLAB sends the image over UART into BRAM, the FPGA computes the edge map, and UART returns it to MATLAB.*
 
+Sobel finds edges by convolving the image A with two 3×3 kernels. One measures the horizontal gradient, the other the vertical gradient. Where the intensity changes sharply, the gradient is large and an edge is marked.
+
+```
+       [ −1   0  +1 ]
+  Gx = [ −2   0  +2 ] * A
+       [ −1   0  +1 ]
+
+       [ −1  −2  −1 ]
+  Gy = [  0   0   0 ] * A
+       [ +1  +2  +1 ]
+```
+
 - **A configurable window, not a hard-wired Sobel.** Changing the coefficients adapts the same hardware to other window-based operations. Sobel is one example.
 - **E ≈ |Gx| + |Gy| instead of √(Gx² + Gy²).** One addition replaces two multiplications and a square root. The cost: the approximation overestimates the gradient by up to √2 (about 41%) when both components are equal, so diagonal edges look stronger than horizontal or vertical ones.
 - **Line buffers and a sliding window.** Pixels are processed as a stream, so the image is read once.
