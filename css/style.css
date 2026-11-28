@@ -158,7 +158,7 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .prose td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line);color:var(--text)}
 .prose th:last-child,.prose td:last-child{padding-right:0}
 /* Figures: an image followed by an *italic caption* in the same paragraph */
-.prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px;cursor:zoom-in}
+.prose img{display:block;max-width:100%;height:auto;margin:0 auto;background:transparent;border-radius:6px;cursor:zoom-in;mix-blend-mode:multiply}
 /* text on one side, its figure(s) on the other (built by the script in the project layout) */
 .fig-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
 .fig-row.big{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
@@ -170,13 +170,15 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .fig-row img,.prose p.fig-solo>img{max-height:300px;width:auto;max-width:100%}
 .fig-row.big img{max-height:520px}
 .fig-row .figs>p:nth-child(n+2) img{max-height:240px}
+.fig-row.big .figs>p:nth-child(n+2) img{max-height:300px}
 /* figures that sit below their text at a larger size: add {: .wide} after the image in the Markdown */
 .prose p.fig-wide{max-width:780px;margin-left:auto;margin-right:auto}
 .prose p.fig-wide>img{max-height:720px;width:auto;max-width:100%}
 .prose p.fig-wide>img+em{text-align:center}
 .eq{font-family:var(--mono);font-size:.9em;background:#efede7;padding:1px 6px;border-radius:4px;color:var(--ink);white-space:nowrap}
 .cover{max-width:760px;margin:0 auto}
-.cover .frame img{max-height:380px;width:auto;max-width:100%;margin:0 auto;padding:10px}
+.cover .frame{background:none;border:0;border-radius:0}
+.cover .frame img{max-height:380px;width:auto;max-width:100%;margin:0 auto;mix-blend-mode:multiply}
 .zoom{position:fixed;inset:0;z-index:50;background:rgba(20,20,18,.86);display:flex;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
 .zoom img{max-width:100%;max-height:100%;width:auto;height:auto;background:#fff;border-radius:8px;padding:10px;cursor:zoom-out}
 .prose .video{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#000}
@@ -230,7 +232,6 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
   .prose>h2:first-child{padding-top:36px}
   .article h2{font-size:26px}
   .prose p,.prose li{font-size:16px;line-height:1.65}
-  .prose img{padding:6px}
   .fig-row,.fig-row.big{grid-template-columns:1fr;gap:14px}
   .fig-row.multi .txt{position:static}
   .eq{white-space:normal}

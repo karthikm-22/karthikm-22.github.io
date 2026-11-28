@@ -11,7 +11,7 @@ bio: >-
   from RTL and FPGA to fabricated silicon.
 
 # Shown as a line of text right under the name
-cgpa: "9.84 / 10"
+cgpa: ""   # CGPA/CPI hidden for now. Put the value back here to show it.
 
 photo: ""        # e.g. images/profile.jpg  (portrait, about 800 × 1000 px)
 
@@ -37,12 +37,12 @@ research:
     than downstream implementation details.
 
 publications:
-  - label: Accepted · CMES-2027, IIT Guwahati
+  - label: Accepted · CMES 2027
     title: A framework for LVET and CO estimation using custom hardware
-    note: Lead author
-  - label: 2025 · IISc Bangalore
-    title: Top 15 nationally, ICEdge 2025 R&D Forum
-    note: Cuffless blood pressure estimation and cardiac disease classification
+    note: Lead author · IEEE Conference on Medical Engineering and Sciences 2027 (CMES 2027), IIT Guwahati
+  - label: Poster · ICEdge 2025
+    title: Cuffless blood pressure estimation and cardiac disease classification
+    note: Co-author · International Conference on Intelligent Computing and Systems at the Edge (ICEdge 2025), IISc Bengaluru
 
 # About section at the bottom of the home page
 about:

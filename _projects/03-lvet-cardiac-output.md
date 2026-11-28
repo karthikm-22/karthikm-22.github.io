@@ -21,19 +21,19 @@ report: ""
 
 A custom analog front end was designed for PCG signal conditioning and acquisition. It captures the S1 and S2 heart sounds, which mark the closing of the heart valves and so bound the ejection phase of each beat.
 
-![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg)
-*Fig. 2 — The assembled PCG hardware: stethoscope pickup, conditioning board and ESP32.*
+![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .big}
+*Fig. 2 — The PCB design of the custom PCG conditioning board (79.5 × 49.3 mm), top and bottom layers.*
 
-![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .wide}
-*Fig. 3 — Layout of the custom PCG conditioning board (79.5 × 49.3 mm), top and bottom layers.*
+![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg){: .big}
+*Fig. 3 — The fabricated PCG hardware: stethoscope pickup, conditioning board and ESP32.*
 
 A matching custom board conditions the PPG signal.
 
-![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg)
-*Fig. 4 — The assembled PPG conditioning board.*
+![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .big}
+*Fig. 4 — The PCB design of the custom PPG conditioning board, top and bottom layers.*
 
-![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .wide}
-*Fig. 5 — Layout of the custom PPG conditioning board, top and bottom layers.*
+![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg){: .big}
+*Fig. 5 — The fabricated PPG conditioning board.*
 
 ## Algorithms
 
@@ -56,7 +56,7 @@ The heart-sound segmentation algorithm was validated on 2,192 recordings from Ph
 
 ## Publication
 
-"A Framework for LVET and CO Estimation on a Custom-Built Front-End Hardware", first author. Formally accepted for presentation at the Conference on Medical Engineering and Science (CMES 2027), IIT Guwahati, February 2027.
+"A Framework for LVET and CO Estimation on a Custom-Built Front-End Hardware", first author. Formally accepted for presentation at the IEEE Conference on Medical Engineering and Sciences 2027 (CMES 2027), IIT Guwahati, February 2027.
 
 ## Continuing work
 

@@ -23,4 +23,4 @@ The hardware acquires PPG and ECG signals and transmits them wirelessly to a mob
 
 ## ICEdge 2025
 
-The system was presented at the R&D Forum of ICEdge 2025, IISc Bengaluru, in December 2025. I co-authored the poster and demonstrated the system live. The project was selected among the Top 15 projects showcased at the event.
+The system was presented at the R&D Forum of the International Conference on Intelligent Computing and Systems at the Edge (ICEdge 2025), IISc Bengaluru, in December 2025. I co-authored the poster and demonstrated the system live. The project was selected among the Top 15 projects showcased at the event.
