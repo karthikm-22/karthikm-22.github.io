@@ -14,7 +14,7 @@ intro: An 8-bit Simple-As-Possible (SAP) processor, first built and debugged on 
 cover: images/8bit/breadboard-to-tapeout.jpg
 cover_wide: true
 cover_caption: "Fig. 1 — From breadboard to silicon: the breadboard SAP computer, its PCB, the chip layout, the fabricated die and the packaged chip on its test board."
-plain_figs: true   # blend figures into the page background (no white card)
+cover_plain: true   # cover strip blends into the page background instead of sitting on white
 report: ""
 ---
 
@@ -26,18 +26,18 @@ This project takes a Simple-As-Possible (SAP) 8-bit computer from breadboards to
 
 Two stages. On the breadboard, a 16 × 8 RAM built from gates and flip-flops, addressed by the Memory Address Register and sharing the bus with the rest of the SAP computer; I helped integrate and debug the complete computer.
 
-![The RAM module built on breadboard](images/8bit/ram-breadboard.jpg){: .pair}
+![The RAM module built on breadboard](images/8bit/ram-breadboard.jpg){: .pair .plain}
 *Fig. 2 — The RAM module on breadboard.*
 
-![PCB layout of the RAM module](images/8bit/ram-pcb.png){: .pair}
+![PCB layout of the RAM module](images/8bit/ram-pcb.png){: .pair .plain}
 *Fig. 3 — PCB layout of the RAM module, with inputs from the Memory Address Register, the bus and the control logic.*
 
 On the chip, the 8-bit register block in Cadence Virtuoso, 180 nm CMOS: each bit is a D-register with a tristate buffer onto the shared bus, controlled by OE, IE and CLK.
 
-![Layout of the 8-bit register block in Cadence Virtuoso](images/8bit/register-block-layout.jpg){: .pair}
+![Layout of the 8-bit register block in Cadence Virtuoso](images/8bit/register-block-layout.jpg){: .pair .plain}
 *Fig. 4 — Full layout of the 8-bit register block in Cadence Virtuoso, with its eight bus lines, the ALU outputs and the OE, IE and CLK control signals.*
 
-![Close-up of the register block layout](images/8bit/register-block-detail.jpg){: .pair}
+![Close-up of the register block layout](images/8bit/register-block-detail.jpg){: .pair .plain}
 *Fig. 5 — Close-up of the layout, marking the tristate buffers and a 1-bit D-register.*
 
 - **Tristate buffers on the bus.** Several blocks on the chip share the bus, and two cannot drive it at the same time. A register therefore drives the bus only while its output-enable is on.

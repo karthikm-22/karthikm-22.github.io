@@ -186,8 +186,8 @@ figcaption{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .cover{max-width:760px;margin:0 auto}
 .cover .frame{background:none;border:0;border-radius:0}
 .cover .frame img{max-height:380px;width:auto;max-width:100%;margin:0 auto;background:#fff}
-/* pages that blend figures into the page background instead of showing a white card */
-.plain-figs img,.cover.plain .frame img{background:transparent;border:0;mix-blend-mode:multiply}
+/* photos and covers that blend into the page background instead of sitting on a white card */
+.prose img.plain,.cover.plain .frame img{background:transparent;border:0;mix-blend-mode:multiply}
 /* cover_wide: true in the front matter shows a long strip of images at the full width of the page */
 .cover.wide{max-width:none}
 .cover.wide .frame img{max-height:none;width:100%}
