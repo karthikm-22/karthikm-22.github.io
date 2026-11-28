@@ -4,7 +4,7 @@ order: 6
 tag: VLSI DSP Architecture
 summary: RTL architecture for a three-level forward discrete wavelet transform, built from polyphase filter banks with a pipelined fixed-point datapath.
 meta: 3-level DWT · Daubechies wavelets
-image: images/dwt/dwt-output.png
+image: images/dwt/polyphase-stage.png
 mark: DWT
 
 # ── Detail page ──
