@@ -47,14 +47,15 @@ publications:
 # About section at the bottom of the home page
 about:
   - >-
-    I am Karthik Maddimsetti. I am an Electronics and VLSI Design Engineering
-    student at Dhirubhai Ambani University (Formerly, DA-IICT), passionate about
-    designing efficient integrated circuits and hardware architectures.
+    I am an Electronics and VLSI Design student at Dhirubhai Ambani University
+    (formerly DA-IICT), India. I design integrated circuits and hardware
+    architectures for signal processing, with interests in digital IC design,
+    signal conditioning front-ends, digital signal processing, and a growing
+    focus on biomedical ICs.
   - >-
-    My interests span digital IC design, VLSI implementation, and DSP hardware,
-    with a growing focus on biomedical signal acquisition and processing. Through
-    academic projects and research experience, I enjoy exploring the intersection
-    of circuit design, signal processing, and real-world applications.
+    I aspire to pursue advanced research through graduate and doctoral studies,
+    contributing to the development of efficient hardware solutions for
+    real-world applications.
 
 # Skills table next to the About text
 skills:
