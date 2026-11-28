@@ -87,8 +87,8 @@ layout: default
       if (figs.children.length > 1) row.classList.add('multi');
     });
     // Click any figure to see it full size.
-    prose.addEventListener('click', function (e) {
-      if (e.target.tagName !== 'IMG') return;
+    document.addEventListener('click', function (e) {
+      if (e.target.tagName !== 'IMG' || !e.target.closest('.prose, .cover')) return;
       var o = document.createElement('div'); o.className = 'zoom';
       var i = document.createElement('img'); i.src = e.target.src; i.alt = e.target.alt;
       o.appendChild(i); o.onclick = function () { o.remove(); };

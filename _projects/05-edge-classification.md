@@ -12,8 +12,9 @@ mark: Edge
 heading: Cuffless Blood Pressure Estimation and Cardiac Disease Classification
 eyebrow: Research · R&D Forum, ICEdge 2025, IISc Bengaluru
 intro: A wearable 2-lead ECG and finger-PPG system with on-phone analysis for cardiac disease classification and cuffless blood pressure. Poster co-author; my part was the PPG acquisition hardware.
-cover: ""
-cover_caption: ""
+cover: images/edge/poster.jpg
+cover_wide: true
+cover_caption: "Fig. 1 — The poster presented at ICEdge 2025, IISc Bengaluru. Click to enlarge."
 report: ""
 ---
 
@@ -26,7 +27,7 @@ Hypertension is called a silent killer, and measuring blood pressure or ECG norm
 A 2-lead ECG (limb electrodes only) and a finger-mounted PPG sensor stream over Wi-Fi to an Android phone, which classifies cardiac anomalies and computes systolic and diastolic pressure from pulse transit time. My part was the PPG acquisition hardware; the other points describe the system around it.
 
 ![System overview: ECG and PPG acquisition, Wi-Fi link, phone-side processing](images/edge/card.png){: .wide}
-*Fig. 1 — System overview: the PPG and 2-lead ECG acquisition chains stream over Wi-Fi from ESP32 nodes to the phone, which synchronises the signals, classifies cardiac disease and computes systolic and diastolic pressure.*
+*Fig. 2 — System overview: the PPG and 2-lead ECG acquisition chains stream over Wi-Fi from ESP32 nodes to the phone, which synchronises the signals, classifies cardiac disease and computes systolic and diastolic pressure.*
 
 - **PPG band-pass of 0.5–8 Hz in two active stages (my contribution).** I kept the upper corner at 8 Hz because of the dicrotic notch, a feature of interest. A potentiometer between the two stages sets the gain for each subject, because pulse amplitude varies from person to person and could otherwise saturate the signal.
 - **Sub-millisecond synchronisation of ECG and PPG.** Pulse transit time is the delay between the ECG R-peak and the PPG pulse, so the two signals need a shared time base. A synchronisation algorithm over the Wi-Fi link aligns them to better than ±1 ms.
