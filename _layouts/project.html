@@ -23,7 +23,12 @@ layout: default
     {%- if page.intro %}<p>{{ page.intro }}</p>{% endif %}
   </header>
 
-  {%- if page.cover and page.cover != "" %}
+  {%- if page.video and page.video != "" %}
+  <figure class="cover">
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{{ page.video }}" title="{{ page.title }}: demonstration" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+    <figcaption><a href="https://youtu.be/{{ page.video }}" target="_blank" rel="noopener">Watch the demonstration on YouTube ↗</a></figcaption>
+  </figure>
+  {%- elsif page.cover and page.cover != "" %}
   <figure class="cover">
     <div class="frame"><img src="{{ page.cover | relative_url }}" alt="{{ page.title }}"></div>
     {%- if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}

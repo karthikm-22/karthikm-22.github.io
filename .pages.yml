@@ -77,6 +77,7 @@ content:
       - { name: heading, label: "Page: long title (optional)", type: string }
       - { name: eyebrow, label: "Page: small line above the title", type: string }
       - { name: intro, label: "Page: intro paragraph", type: text }
+      - { name: video, label: "Page: YouTube video ID (shown at the top instead of the cover image)", type: string }
       - { name: cover, label: "Page: big cover image", type: image, media: images }
       - { name: cover_caption, label: "Page: cover caption", type: string }
       - { name: report, label: "Page: full report (PDF)", type: file, media: files }
