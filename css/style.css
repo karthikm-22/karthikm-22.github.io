@@ -58,6 +58,8 @@ p{text-wrap:pretty}
 .projects{display:flex;flex-direction:column;gap:36px;padding:80px 0;border-top:1px solid var(--ink);scroll-margin-top:64px}
 .projects-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:56px 36px}
+/* Research has two cards: let them share the row instead of leaving a blank third column */
+.research .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .card{display:flex;flex-direction:column;gap:18px;min-width:0;color:var(--ink)}
 a.card{transition:transform .2s ease}
 a.card:hover{transform:translateY(-3px);text-decoration:none;color:var(--ink)}
