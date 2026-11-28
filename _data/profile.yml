@@ -13,7 +13,7 @@ bio: >-
 # Shown as a line of text right under the name
 cgpa: ""   # CGPA/CPI hidden for now. Put the value back here to show it.
 
-photo: ""        # e.g. images/profile.jpg  (portrait, about 800 × 1000 px)
+photo: images/profile.jpg        # portrait, about 800 × 1000 px
 
 # Contact & links
 email: karthik.vssr@gmail.com
@@ -28,33 +28,34 @@ project_tags: ASIC · FPGA · DSP · Biomedical
 
 research:
   question: >-
-    How much of an algorithm's suitability for real-time, low-power deployment
-    is determined not only by the algorithm itself, but also by the
-    architectural choices made in translating it into hardware.
+    How can application-specific knowledge guide architectural and
+    circuit-level decisions to achieve efficient hardware implementation under
+    resource constraints?
   text: >-
-    I am interested in VLSI DSP architectures and ASIC design, where throughput,
-    power, and area constraints are treated as first-order design inputs rather
-    than downstream implementation details.
+    I am currently working on building such energy-efficient solutions,
+    particularly for life-improving integrated biomedical acquisition
+    and processing systems.
 
 publications:
   - label: Accepted · CMES 2027
-    title: A framework for LVET and CO estimation using custom hardware
-    note: Lead author · IEEE Conference on Medical Engineering and Sciences 2027 (CMES 2027), IIT Guwahati
+    title: A Framework for LVET and CO Estimation on a Custom-Built Front-End Hardware
+    note: First author · IEEE Conference on Medical Engineering and Sciences 2027 (CMES 2027), IIT Guwahati
   - label: Poster · ICEdge 2025
-    title: Cuffless blood pressure estimation and cardiac disease classification
+    title: Cardiac Disease Classification and Cuff-less Blood Pressure Monitoring
     note: Co-author · International Conference on Intelligent Computing and Systems at the Edge (ICEdge 2025), IISc Bengaluru
 
 # About section at the bottom of the home page
 about:
   - >-
-    I am Karthik Maddimsetti. I am an Electronics and VLSI Design Engineering
-    student at Dhirubhai Ambani University (Formerly, DA-IICT), passionate about
-    designing efficient integrated circuits and hardware architectures.
+    I am an Electronics and VLSI Design student at Dhirubhai Ambani University
+    (formerly DA-IICT), India. I design integrated circuits and hardware
+    architectures for signal processing, with interests in digital IC design,
+    signal conditioning front-ends, digital signal processing, and a growing
+    focus on biomedical ICs.
   - >-
-    My interests span digital IC design, VLSI implementation, and DSP hardware,
-    with a growing focus on biomedical signal acquisition and processing. Through
-    academic projects and research experience, I enjoy exploring the intersection
-    of circuit design, signal processing, and real-world applications.
+    I aspire to pursue advanced research through graduate and doctoral studies,
+    contributing to the development of efficient hardware solutions for
+    real-world applications.
 
 # Skills table next to the About text
 skills:

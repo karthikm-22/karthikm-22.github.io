@@ -3,8 +3,7 @@
 
 title: Karthik Maddimsetti
 description: >-
-  Karthik Maddimsetti, BTech Electronics and VLSI Design at Dhirubhai Ambani
-  University. Hardware architectures for signal-processing algorithms, from
+  BTech Electronics and VLSI Design at Dhirubhai Ambani University. Hardware architectures for signal-processing algorithms, from
   RTL and FPGA to fabricated silicon.
 lang: en
 author: Karthik Maddimsetti
@@ -19,7 +18,7 @@ baseurl: ""
 defaults:
   - scope: { path: "" }
     values:
-      image: images/ppg/p5-6.jpg
+      image: images/profile.jpg
   - scope: { path: "", type: projects }
     values:
       layout: project
