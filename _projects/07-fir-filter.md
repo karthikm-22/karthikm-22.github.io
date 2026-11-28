@@ -4,7 +4,7 @@ order: 7
 tag: VLSI DSP Architecture
 summary: FIR filter built from custom adder and multiplier blocks, with analysis of quantization errors and transition dependent delays.
 meta: 15 taps · 5 multipliers · Q1.7
-image: images/fir/input-output.png
+image: images/fir/csa-tree.png
 mark: FIR
 
 # ── Detail page ──
