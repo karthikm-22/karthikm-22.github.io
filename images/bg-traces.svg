@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260" fill="none" stroke="#1d3f6e" stroke-opacity=".085" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 40H70L90 60H150"/><path d="M0 52H62L82 72H110L130 92H200L220 112H260"/><path d="M30 0V50L50 70V130"/><path d="M110 0V30L130 50H210L230 30V0"/>
+<path d="M150 260V200L170 180H260"/><path d="M40 260V210L60 190H120L140 170V140"/><path d="M200 260V230L220 210H260"/><path d="M0 170H40L60 150V130"/><path d="M0 200H30L50 220"/>
+<circle cx="150" cy="60" r="3.5"/><circle cx="130" cy="92" r="3.5"/><circle cx="50" cy="130" r="3.5"/><circle cx="260" cy="180" r="3.5"/><circle cx="140" cy="140" r="3.5"/><circle cx="210" cy="50" r="3.5"/><circle cx="60" cy="130" r="3.5"/>
+</svg>

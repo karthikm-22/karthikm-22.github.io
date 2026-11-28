@@ -18,7 +18,7 @@ photo: images/profile.jpg        # portrait, about 800 × 1000 px
 # Contact & links
 email: karthik.vssr@gmail.com
 phone: "+91 83673 14976"
-cv: ""           # e.g. files/Karthik-Maddimsetti-CV.pdf
+cv: files/Karthik-Maddimsetti-CV.pdf   # replace this PDF (same name) to update the CV
 github: ""       # e.g. https://github.com/karthikm-22
 linkedin: ""     # e.g. https://www.linkedin.com/in/...
 scholar: ""      # e.g. https://scholar.google.com/citations?user=...
