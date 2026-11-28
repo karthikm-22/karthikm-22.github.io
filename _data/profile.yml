@@ -13,7 +13,7 @@ bio: >-
 # Shown as a line of text right under the name
 cgpa: ""   # CGPA/CPI hidden for now. Put the value back here to show it.
 
-photo: ""        # e.g. images/profile.jpg  (portrait, about 800 × 1000 px)
+photo: images/profile.jpg        # portrait, about 800 × 1000 px
 
 # Contact & links
 email: karthik.vssr@gmail.com
