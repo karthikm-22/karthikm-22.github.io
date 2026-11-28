@@ -50,7 +50,7 @@ Two ring-oscillator clocks from cascaded CARRY4 primitives, one slow (25.24 ns) 
 ![Oscilloscope captures of the slow and fast clocks](images/tdc/clock-waveforms.png){: .wide}
 *Fig. 6 — (c) Cursors marking the residual interval between the slow clock (sclk) and the fast clock (fclk). (d) The sclk and fclk waveforms.*
 
-## Trade-offs, limitations and future work
+## Limitations and future work
 
 - The oscilloscope cursor resolves 50 ps, which adds up to about 200 ps of measurement error. That is large against a 480 ps step.
 - START and STOP currently come from two switches, so the input cannot be controlled or swept over the full range.

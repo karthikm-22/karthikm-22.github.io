@@ -27,18 +27,18 @@ Two custom front ends, one for PCG and one for PPG, stream to a mobile applicati
 
 The PCG front end: stethoscope pickup, conditioning board and ESP32.
 
-![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .big}
+![PCG conditioning board layout, top and bottom layers](images/lvet/pcg-board-layout.png){: .pair}
 *Fig. 2 — The PCB design of the custom PCG conditioning board (79.5 × 49.3 mm), top and bottom layers.*
 
-![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg){: .big}
+![Assembled PCG hardware with stethoscope and ESP32](images/lvet/pcg-hardware.jpg){: .pair}
 *Fig. 3 — The fabricated PCG hardware: stethoscope pickup, conditioning board and ESP32.*
 
 The PPG front end: a matching custom conditioning board.
 
-![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .big}
+![PPG conditioning board layout, top and bottom layers](images/lvet/ppg-board-layout.png){: .pair}
 *Fig. 4 — The PCB design of the custom PPG conditioning board, top and bottom layers.*
 
-![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg){: .big}
+![Assembled PPG conditioning board](images/lvet/ppg-hardware.jpg){: .pair}
 *Fig. 5 — The fabricated PPG conditioning board.*
 
 Three lightweight algorithms run on the signals; each choice below comes with its reason.
@@ -61,7 +61,7 @@ The reference is the dataset's own S1 and S2 annotation.
 ![Adaptive S1–S2 detection compared with database annotations](images/lvet/s1-s2-detection.png){: .wide}
 *Fig. 6 — The adaptive algorithm on a PhysioNet recording: raw PCG, detected S1 and S2, the ground-truth annotations, and the smoothed Hilbert envelope with its learning and classification windows.*
 
-## Trade-offs, limitations and future work
+## Limitations and future work
 
 - Stroke volume and cardiac output estimates are not yet validated against a reference.
 - Next: validate stroke volume and cardiac output, and the uncalibrated beat-to-beat extension from the internship.

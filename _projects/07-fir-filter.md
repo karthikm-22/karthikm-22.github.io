@@ -24,10 +24,12 @@ The task was a 15-tap low-pass FIR (−6 dB at 1 kHz, at least 20 dB attenuation
 
 A 15-tap FIR in Verilog: a 14-stage delay line, four 8-bit pre-adders, five 8 × 8 array multipliers (modified for unsigned × signed), and a six-operand carry-save adder tree with a final ripple-carry adder. Samples and coefficients are Q1.7, and the sampling frequency is 4 kHz.
 
-![FIR filter structure and resources](images/fir/fir-structure.png){: .big}
+![FIR filter structure and resources](images/fir/fir-structure.png){: .wide}
 *Fig. 1 — Filter structure: delay line, pre-adders for symmetric taps, five coefficient multipliers and the six-operand CSA. The box lists the hardware it needs.*
 
-![Six-operand CSA and XOR logic](images/fir/csa-tree.png){: .big}
+The six-operand carry-save tree sums the products, and the XOR rows in front of it let the same tree subtract as well as add.
+
+![Six-operand CSA and XOR logic](images/fir/csa-tree.png){: .wide .xl}
 *Fig. 2 — The six-operand CSA tree (top) and the XOR logic that conditionally inverts each operand (bottom).*
 
 - **Skip the zeros, then use symmetry.** The coefficients are half-band: every other tap is zero and the centre tap is 0.5. So only 9 taps are non-zero, and symmetric pairs share a coefficient and can be added before multiplying. Fifteen multipliers become five. (Direct form: 15 multipliers and 14 adders.)
@@ -46,7 +48,7 @@ A 15-tap FIR in Verilog: a 14-stage delay line, four 8-bit pre-adders, five 8 ×
 ![Filter input and output](images/fir/input-output.png){: .wide}
 *Fig. 3 — Filter input and output, both in Q1.7.*
 
-## Trade-offs, limitations and future work
+## Limitations and future work
 
 - Pre-adder sums can overflow for large inputs, that needs input scaling or guard bits.
 - Using the earlier-designed array multiplier was a requirement. Several coefficients are exact shifts (0.5, 0.0625) or shift-and-add, so a multiplier-free version would save more hardware. That is the natural next step.

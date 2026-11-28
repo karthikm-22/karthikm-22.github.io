@@ -24,18 +24,18 @@ This project takes a Simple-As-Possible (SAP) 8-bit computer from breadboards to
 
 Two stages. On the breadboard, a 16 × 8 RAM built from gates and flip-flops, addressed by the Memory Address Register and sharing the bus with the rest of the SAP computer; I helped integrate and debug the complete computer.
 
-![The RAM module built on breadboard](images/8bit/ram-breadboard.jpg)
+![The RAM module built on breadboard](images/8bit/ram-breadboard.jpg){: .pair}
 *Fig. 2 — The RAM module on breadboard.*
 
-![PCB layout of the RAM module](images/8bit/ram-pcb.png)
+![PCB layout of the RAM module](images/8bit/ram-pcb.png){: .pair}
 *Fig. 3 — PCB layout of the RAM module, with inputs from the Memory Address Register, the bus and the control logic.*
 
 On the chip, the 8-bit register block in Cadence Virtuoso, 180 nm CMOS: each bit is a D-register with a tristate buffer onto the shared bus, controlled by OE, IE and CLK.
 
-![Layout of the 8-bit register block in Cadence Virtuoso](images/8bit/register-block-layout.jpg){: .big}
+![Layout of the 8-bit register block in Cadence Virtuoso](images/8bit/register-block-layout.jpg){: .pair}
 *Fig. 4 — Full layout of the 8-bit register block in Cadence Virtuoso, with its eight bus lines, the ALU outputs and the OE, IE and CLK control signals.*
 
-![Close-up of the register block layout](images/8bit/register-block-detail.jpg){: .big}
+![Close-up of the register block layout](images/8bit/register-block-detail.jpg){: .pair}
 *Fig. 5 — Close-up of the layout, marking the tristate buffers and a 1-bit D-register.*
 
 - **Tristate buffers on the bus.** Several blocks on the chip share the bus, and two cannot drive it at the same time. A register therefore drives the bus only while its output-enable is on.
@@ -56,6 +56,6 @@ For the register block, from post-layout simulation at the typical corner. Funct
 | Process | 180 nm CMOS |
 | Fabrication | SCL, Chandigarh |
 
-## Trade-offs, limitations and future work
+## Future work
 
 - The fabricated chip will be tested in my final semester.

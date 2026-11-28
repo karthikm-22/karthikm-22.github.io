@@ -44,7 +44,7 @@ A 12-bit Brent–Kung adder (a parallel-prefix design that finds carries in a lo
 
 Decorrelation does most of the work, lifting combined coverage from 52.67% to 97.60%. The wider signature adds 0.29 points and brings stuck-at-0 coverage to 100%.
 
-## Trade-offs, limitations and future work
+## Limitations and future work
 
 - The remaining 2.11% (about 15 of the 710 faults) are all stuck-at-1 faults on a long NAND chain in the adder. They cannot be exposed because the BILBO generator never produces the all-zeros pattern they need.
 - Reaching them would need a generator that can reach the all-zeros state.

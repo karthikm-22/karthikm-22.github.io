@@ -49,7 +49,7 @@ The RTL output was verified against the MATLAB reference model, and the plot of 
 ![Approximation and detail coefficients at three levels](images/dwt/dwt-output.png){: .wide}
 *Fig. 4 — Output of the RTL design, plotted from the Vivado simulation results: approximation (cA) and detail (cD) coefficients at levels 1 to 3.*
 
-## Trade-offs, limitations and future work
+## Trade-offs and future work
 
 - The RTL uses Q1.7, which the study suggests is adequate only for low-order wavelets, but a longer format will increase hardware overhead. So the decision needs to be made depending on the specification or application.
 - Next: an inverse DWT to check perfect reconstruction, a lifting-scheme comparison, and tests on real signals such as ECG.

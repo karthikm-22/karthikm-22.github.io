@@ -50,7 +50,8 @@ layout: default
 </main>
 <script>
   // Puts each figure beside the paragraph(s) that introduce it. In the Markdown, add {: .wide} after an image to show
-  // it larger below its text, or {: .big} to keep it beside the text but larger.
+  // it larger below its text, {: .big} to keep it beside the text but larger, or {: .pair} on two consecutive images to put them
+  // side by side under their text.
   (function () {
     var prose = document.querySelector('.prose');
     if (!prose) return;
@@ -58,6 +59,13 @@ layout: default
     var has = function (el, c) { return el.firstElementChild.classList.contains(c); };
     Array.prototype.slice.call(prose.children).forEach(function (el) {
       if (!isFig(el) || el.parentNode !== prose) return;
+      if (has(el, 'pair')) {
+        var grid = document.createElement('div'); grid.className = 'fig-pair';
+        prose.insertBefore(grid, el);
+        var q = el;
+        while (isFig(q) && has(q, 'pair')) { var nx = q.nextElementSibling; grid.appendChild(q); q = nx; }
+        return;
+      }
       if (has(el, 'wide')) { el.classList.add('fig-wide'); return; }
       var texts = [], len = 0, t = el.previousElementSibling;
       while (t && t.tagName === 'P' && !isFig(t)) {

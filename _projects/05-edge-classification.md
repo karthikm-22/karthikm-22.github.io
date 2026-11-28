@@ -44,7 +44,7 @@ System-level results as reported on the group's poster:
 | Atrial fibrillation detection (MIT-BIH database) | sensitivity 100% |
 | Validation | databases, then a hospital setup with 300+ patients under ethical clearance |
 
-## Trade-offs, limitations and future work
+## Limitations
 
 - Battery life is about 5 hours; a solar module extends it, which matters in rural areas.
 - The accuracy figures above are system-level results from the group's work.
